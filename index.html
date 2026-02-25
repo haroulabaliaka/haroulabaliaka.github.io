@@ -1,7 +1,6 @@
 <!DOCTYPE HTML>
 <!--
 	Editorial by HTML5 UP
-	html5up.net
 -->
 <html>
 <head>
@@ -10,151 +9,144 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
 
-	<!-- Sidebar "Prologue-style" fake -->
 	<style>
-		/* --- Sidebar header block (avatar + name/title) --- */
+		/* =========================
+		   DARK SIDEBAR BACKGROUND
+		   ========================= */
+		#sidebar {
+			background: linear-gradient(
+				180deg,
+				#14161c 0%,
+				#1c1f27 45%,
+				#0f1116 100%
+			) !important;
+			color: rgba(255,255,255,0.75);
+		}
+
+		#sidebar h1,
+		#sidebar h2,
+		#sidebar h3,
+		#sidebar a {
+			color: rgba(255,255,255,0.85) !important;
+		}
+
+		/* =========================
+		   PROFILE HEADER
+		   ========================= */
 		#sidebar .profile {
-			padding: 2.25em 1.75em 1.25em 1.75em;
+			padding: 2.2em 1.6em 1.3em 1.6em;
 			border-bottom: 1px solid rgba(255,255,255,0.08);
 		}
-		#sidebar .profile .avatar {
+
+		#sidebar .avatar {
 			display: inline-block;
 			width: 86px;
 			height: 86px;
-			border-radius: 12px;
+			border-radius: 14px;
 			overflow: hidden;
+			margin-right: 1em;
 			vertical-align: middle;
-			margin-right: 1.1em;
-			box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+			box-shadow: 0 12px 30px rgba(0,0,0,0.45);
 		}
-		#sidebar .profile .avatar img {
+
+		#sidebar .avatar img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			display: block;
 		}
-		#sidebar .profile .who {
+
+		#sidebar .who {
 			display: inline-block;
 			vertical-align: middle;
-			max-width: calc(100% - 130px);
 		}
-		#sidebar .profile .who h1 {
+
+		#sidebar .who h1 {
 			margin: 0;
-			font-size: 1.65em;
-			line-height: 1.15;
+			font-size: 1.55em;
 			color: #fff;
-			letter-spacing: 0.02em;
 		}
-		#sidebar .profile .who p {
-			margin: 0.4em 0 0 0;
+
+		#sidebar .who p {
+			margin: 0.35em 0 0 0;
+			font-size: 0.9em;
 			color: rgba(255,255,255,0.6);
-			line-height: 1.4;
-			font-size: 0.95em;
+			line-height: 1.45;
 		}
 
-		/* --- Prologue-like nav rows --- */
-		#sidebar nav#menu {
-			padding-top: 0.75em;
-		}
+		/* =========================
+		   NAVIGATION ROWS
+		   ========================= */
 		#sidebar nav#menu header.major {
-			display: none; /* hide "Menu" title */
-		}
-		#sidebar nav#menu ul {
-			margin: 0;
-		}
-		#sidebar nav#menu ul li {
-			margin: 0;
-			padding: 0;
-		}
-		#sidebar nav#menu ul li a {
-			display: flex;
-			align-items: center;
-			gap: 1.1em;
-
-			padding: 1.2em 1.4em;
-			border: 0;
-			text-decoration: none;
-
-			/* big row feel */
-			min-height: 74px;
-
-			/* subtle separated panels */
-			background: rgba(255,255,255,0.03);
-			border-top: 1px solid rgba(255,255,255,0.04);
-		}
-		#sidebar nav#menu ul li a:hover {
-			background: rgba(255,255,255,0.06);
-		}
-
-		/* icon column */
-		#sidebar nav#menu ul li a .nav-icon {
-			width: 40px;
-			height: 40px;
-			border-radius: 10px;
-			display: grid;
-			place-items: center;
-			background: rgba(255,255,255,0.05);
-			flex: 0 0 auto;
-		}
-		#sidebar nav#menu ul li a .nav-icon i {
-			font-size: 1.05em;
-			color: rgba(255,255,255,0.55);
-		}
-
-		/* label */
-		#sidebar nav#menu ul li a .nav-label {
-			font-size: 1.15em;
-			color: rgba(255,255,255,0.75);
-			letter-spacing: 0.02em;
-		}
-
-		/* active-ish feel when anchored (best-effort without JS) */
-		#sidebar nav#menu ul li a:focus .nav-label,
-		#sidebar nav#menu ul li a:focus .nav-icon i {
-			color: #fff;
-		}
-
-		/* --- Bottom social bar pinned --- */
-		#sidebar .social {
-			position: sticky;
-			bottom: 0;
-			padding: 1.25em 1.75em 1.5em 1.75em;
-			background: linear-gradient(to top, rgba(0,0,0,0.55), rgba(0,0,0,0.0));
-			border-top: 1px solid rgba(255,255,255,0.08);
-		}
-		#sidebar .social .icons {
-			margin: 0;
-			display: flex;
-			gap: 0.85em;
-			justify-content: flex-start;
-		}
-		#sidebar .social .icons a {
-			display: grid;
-			place-items: center;
-			width: 44px;
-			height: 44px;
-			border-radius: 12px;
-			background: rgba(255,255,255,0.05);
-			border: 1px solid rgba(255,255,255,0.06);
-		}
-		#sidebar .social .icons a:hover {
-			background: rgba(255,255,255,0.08);
-		}
-
-		/* Hide default sidebar footer text (we'll keep it minimal) */
-		#sidebar #footer {
 			display: none;
 		}
 
-		/* Mobile: keep things readable */
-		@media (max-width: 980px) {
-			#sidebar .profile {
-				padding: 1.75em 1.25em 1em 1.25em;
-			}
-			#sidebar nav#menu ul li a {
-				min-height: 64px;
-				padding: 1em 1.1em;
-			}
+		#sidebar nav#menu ul li {
+			margin: 0;
+		}
+
+		#sidebar nav#menu ul li a {
+			display: flex;
+			align-items: center;
+			gap: 1em;
+			padding: 1.15em 1.35em;
+			min-height: 70px;
+			background: rgba(255,255,255,0.03);
+			border-top: 1px solid rgba(255,255,255,0.05);
+		}
+
+		#sidebar nav#menu ul li a:hover {
+			background: rgba(255,255,255,0.07);
+		}
+
+		#sidebar .nav-icon {
+			width: 40px;
+			height: 40px;
+			border-radius: 10px;
+			background: rgba(255,255,255,0.05);
+			display: grid;
+			place-items: center;
+		}
+
+		#sidebar .nav-icon i {
+			color: rgba(255,255,255,0.55);
+		}
+
+		#sidebar .nav-label {
+			font-size: 1.05em;
+			color: rgba(255,255,255,0.75);
+		}
+
+		/* =========================
+		   SOCIAL ICON BAR
+		   ========================= */
+		#sidebar .social {
+			position: sticky;
+			bottom: 0;
+			padding: 1.2em 1.6em 1.4em 1.6em;
+			background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+			border-top: 1px solid rgba(255,255,255,0.08);
+		}
+
+		#sidebar .social .icons {
+			display: flex;
+			gap: 0.75em;
+		}
+
+		#sidebar .social .icons a {
+			width: 42px;
+			height: 42px;
+			border-radius: 12px;
+			background: rgba(255,255,255,0.05);
+			display: grid;
+			place-items: center;
+		}
+
+		#sidebar .social .icons a:hover {
+			background: rgba(255,255,255,0.1);
+		}
+
+		#sidebar #footer {
+			display: none;
 		}
 	</style>
 </head>
@@ -163,11 +155,10 @@
 
 <div id="wrapper">
 
-	<!-- Main -->
+	<!-- MAIN -->
 	<div id="main">
 		<div class="inner">
 
-			<!-- Header -->
 			<header id="header">
 				<a href="index.html" class="logo"><strong>Haroula Baliaka</strong></a>
 				<ul class="icons">
@@ -184,7 +175,6 @@
 				</ul>
 			</header>
 
-			<!-- Banner -->
 			<section id="banner">
 				<div class="content">
 					<header>
@@ -192,9 +182,8 @@
 						<p>Atmospheric Chemistry • Air Quality • Aerosols</p>
 					</header>
 					<p>
-						PhD candidate in Environmental Science & Engineering at Caltech. My research focuses on
-						atmospheric composition, particulate matter, and trace-element dynamics, with an emphasis on
-						wildfires, dust, and community-relevant air-quality monitoring.
+						PhD candidate in Environmental Science & Engineering at Caltech, studying atmospheric composition,
+						particulate matter, and trace-element dynamics across wildfire and urban environments.
 					</p>
 				</div>
 				<span class="image object">
@@ -202,152 +191,58 @@
 				</span>
 			</section>
 
-			<!-- About -->
 			<section id="about">
-				<header class="major">
-					<h2>About</h2>
-				</header>
+				<header class="major"><h2>About</h2></header>
 				<p>
-					I study atmospheric chemistry and air quality, integrating field measurements, sensor networks,
-					and data analysis to understand aerosol sources, transformations, and exposures.
-				</p>
-				<p>
-					My work spans wildfire smoke, post-fire dust, trace elements, and multi-instrument observational
-					strategies, with a strong interest in translating science into public-health and policy-relevant insights.
+					My research integrates field measurements, sensor networks, and data analysis to understand aerosol
+					sources, transformations, and exposures.
 				</p>
 			</section>
 
-			<!-- Projects -->
 			<section id="projects">
-				<header class="major">
-					<h2>Projects</h2>
-				</header>
-
+				<header class="major"><h2>Projects</h2></header>
 				<div class="posts">
 					<article>
-						<a href="#" class="image">
-							<img src="images/project_phoenix.jpg" alt="PHOENIX monitoring network" />
-						</a>
+						<a href="#" class="image"><img src="images/project_phoenix.jpg" alt="" /></a>
 						<h3>PHOENIX</h3>
-						<p>
-							A dense, neighborhood-scale air-quality monitoring network supporting post-fire recovery
-							through real-time PM2.5 and PM10 observations.
-						</p>
+						<p>Neighborhood-scale air-quality monitoring supporting post-fire recovery.</p>
 					</article>
-
 					<article>
-						<a href="#" class="image">
-							<img src="images/project_ascent.jpg" alt="ASCENT measurements" />
-						</a>
+						<a href="#" class="image"><img src="images/project_ascent.jpg" alt="" /></a>
 						<h3>ASCENT</h3>
-						<p>
-							Integrated aerosol measurements and analysis workflows to characterize sources,
-							dynamics, and exposure patterns across the Los Angeles Basin.
-						</p>
-					</article>
-
-					<article>
-						<a href="#" class="image">
-							<img src="images/project_metals.jpg" alt="Trace metals research" />
-						</a>
-						<h3>Trace Metals & Source Apportionment</h3>
-						<p>
-							Trace-element enrichment, PMF source apportionment, and multi-instrument mass closure
-							to interpret wildfire plumes and dust events.
-						</p>
+						<p>Integrated aerosol measurements and exposure analysis workflows.</p>
 					</article>
 				</div>
 			</section>
 
-			<!-- Science Communication -->
 			<section id="science-comm">
-				<header class="major">
-					<h2>Science Communication</h2>
-				</header>
-
-				<div class="features">
-					<article>
-						<span class="icon solid fa-microphone"></span>
-						<div class="content">
-							<h3>Talks & Briefings</h3>
-							<p>Public presentations, webinars, and stakeholder briefings translating research into decisions.</p>
-						</div>
-					</article>
-
-					<article>
-						<span class="icon solid fa-pen"></span>
-						<div class="content">
-							<h3>Writing</h3>
-							<p>Accessible writing and research summaries bridging science, policy, and community understanding.</p>
-						</div>
-					</article>
-
-					<article>
-						<span class="icon solid fa-chart-line"></span>
-						<div class="content">
-							<h3>Data Visualization</h3>
-							<p>Visual storytelling through maps, dashboards, and figures that clarify environmental risks.</p>
-						</div>
-					</article>
-
-					<article>
-						<span class="icon solid fa-people-group"></span>
-						<div class="content">
-							<h3>Community Engagement</h3>
-							<p>Collaborative science initiatives connecting measurements with lived experiences.</p>
-						</div>
-					</article>
-				</div>
+				<header class="major"><h2>Science Communication</h2></header>
+				<p>Public talks, visualizations, and accessible science writing.</p>
 			</section>
 
-			<!-- Outreach -->
 			<section id="outreach">
-				<header class="major">
-					<h2>Outreach</h2>
-				</header>
-				<p>
-					I’m deeply committed to connecting research with communities through environmental monitoring,
-					education, and science-policy engagement.
-				</p>
-				<ul>
-					<li>Community-engaged air-quality monitoring</li>
-					<li>K–12 outreach and mentoring</li>
-					<li>Science-policy and stakeholder collaboration</li>
-				</ul>
+				<header class="major"><h2>Outreach</h2></header>
+				<p>Community-engaged monitoring, mentoring, and science-policy engagement.</p>
 			</section>
 
-			<!-- Contact -->
 			<section id="contact">
-				<header class="major">
-					<h2>Contact</h2>
-				</header>
+				<header class="major"><h2>Contact</h2></header>
 				<ul class="contact">
-					<li class="icon solid fa-envelope">
-						<a href="mailto:haroula@caltech.edu">haroula@caltech.edu</a>
-					</li>
-					<li class="icon brands fa-linkedin">
-						<a href="https://linkedin.com/in/haroula-baliaka/">LinkedIn</a>
-					</li>
-					<li class="icon solid fa-graduation-cap">
-						<a href="https://scholar.google.com/citations?user=AZ6SzzcAAAAJ&hl=en&oi=ao">Google Scholar</a>
-					</li>
+					<li class="icon solid fa-envelope"><a href="mailto:haroula@caltech.edu">haroula@caltech.edu</a></li>
 				</ul>
 			</section>
 
 		</div>
 	</div>
 
-	<!-- Sidebar -->
+	<!-- SIDEBAR -->
 	<div id="sidebar">
 		<div class="inner">
 
-			<!-- Prologue-style profile header -->
 			<section class="profile">
 				<span class="avatar">
-					<!-- Upload your photo to: /images/avatar.jpg -->
 					<img src="images/avatar.jpg" alt="Haroula Baliaka" />
 				</span>
-
 				<div class="who">
 					<h1>Haroula Baliaka</h1>
 					<p>
@@ -358,71 +253,23 @@
 				</div>
 			</section>
 
-			<!-- Prologue-style nav -->
 			<nav id="menu">
 				<ul>
-					<li>
-						<a href="#banner">
-							<span class="nav-icon"><i class="icon solid fa-home"></i></span>
-							<span class="nav-label">Intro</span>
-						</a>
-					</li>
-					<li>
-						<a href="#about">
-							<span class="nav-icon"><i class="icon solid fa-user"></i></span>
-							<span class="nav-label">About Me</span>
-						</a>
-					</li>
-					<li>
-						<a href="#projects">
-							<span class="nav-icon"><i class="icon solid fa-th"></i></span>
-							<span class="nav-label">Projects</span>
-						</a>
-					</li>
-					<li>
-						<a href="#science-comm">
-							<span class="nav-icon"><i class="icon solid fa-bullhorn"></i></span>
-							<span class="nav-label">Science Communication</span>
-						</a>
-					</li>
-					<li>
-						<a href="#outreach">
-							<span class="nav-icon"><i class="icon solid fa-hands-helping"></i></span>
-							<span class="nav-label">Outreach</span>
-						</a>
-					</li>
-					<li>
-						<a href="#contact">
-							<span class="nav-icon"><i class="icon solid fa-envelope"></i></span>
-							<span class="nav-label">Contact</span>
-						</a>
-					</li>
+					<li><a href="#banner"><span class="nav-icon"><i class="icon solid fa-home"></i></span><span class="nav-label">Intro</span></a></li>
+					<li><a href="#about"><span class="nav-icon"><i class="icon solid fa-user"></i></span><span class="nav-label">About Me</span></a></li>
+					<li><a href="#projects"><span class="nav-icon"><i class="icon solid fa-th"></i></span><span class="nav-label">Projects</span></a></li>
+					<li><a href="#science-comm"><span class="nav-icon"><i class="icon solid fa-bullhorn"></i></span><span class="nav-label">Science Communication</span></a></li>
+					<li><a href="#outreach"><span class="nav-icon"><i class="icon solid fa-hands-helping"></i></span><span class="nav-label">Outreach</span></a></li>
+					<li><a href="#contact"><span class="nav-icon"><i class="icon solid fa-envelope"></i></span><span class="nav-label">Contact</span></a></li>
 				</ul>
 			</nav>
 
-			<!-- Bottom social icons (pinned-ish) -->
 			<div class="social">
 				<ul class="icons">
-					<li>
-						<a href="mailto:haroula@caltech.edu" class="icon solid fa-envelope">
-							<span class="label">Email</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://scholar.google.com/citations?user=AZ6SzzcAAAAJ&hl=en&oi=ao" class="icon solid fa-graduation-cap">
-							<span class="label">Google Scholar</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://github.com/haroulabaliaka" class="icon brands fa-github">
-							<span class="label">GitHub</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://linkedin.com/in/haroula-baliaka/" class="icon brands fa-linkedin">
-							<span class="label">LinkedIn</span>
-						</a>
-					</li>
+					<li><a href="mailto:haroula@caltech.edu" class="icon solid fa-envelope"></a></li>
+					<li><a href="https://scholar.google.com/citations?user=AZ6SzzcAAAAJ&hl=en&oi=ao" class="icon solid fa-graduation-cap"></a></li>
+					<li><a href="https://github.com/haroulabaliaka" class="icon brands fa-github"></a></li>
+					<li><a href="https://linkedin.com/in/haroula-baliaka/" class="icon brands fa-linkedin"></a></li>
 				</ul>
 			</div>
 
@@ -431,7 +278,6 @@
 
 </div>
 
-<!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
