@@ -192,7 +192,7 @@
 		   Banner photo (haroula.jpg) SMALLER like ujongebloed
 		   ========================= */
 		#banner .image.object {
-			width: 240px;           /* smaller than before */
+			width: 240px;
 			max-width: 30%;
 			margin-left: 2em;
 			align-self: flex-start;
@@ -215,22 +215,13 @@
 			}
 		}
 
-		/* =========================
-		   SCI COMM: spacing helpers
-		   ========================= */
-		#science-comm h3 {
-			margin-top: 0;
-		}
-
 		/* ============================================================
 		   PUSH MENU OVERRIDES (THIS IS THE IMPORTANT FIX)
 		   ============================================================ */
 		@media (max-width: 980px) {
 			:root { --sidebarW: 380px; }
 
-			body.is-menu-visible:before {
-				display: none !important;
-			}
+			body.is-menu-visible:before { display: none !important; }
 
 			#sidebar {
 				width: var(--sidebarW) !important;
@@ -240,9 +231,7 @@
 				z-index: 1 !important;
 			}
 
-			body.is-menu-visible #sidebar {
-				transform: translateX(0) !important;
-			}
+			body.is-menu-visible #sidebar { transform: translateX(0) !important; }
 
 			#main {
 				transform: translateX(0) !important;
@@ -253,13 +242,9 @@
 				background: #fff;
 			}
 
-			body.is-menu-visible #main {
-				transform: translateX(var(--sidebarW)) !important;
-			}
+			body.is-menu-visible #main { transform: translateX(var(--sidebarW)) !important; }
 
-			html, body {
-				overflow-x: hidden;
-			}
+			html, body { overflow-x: hidden; }
 		}
 
 		/* ============================================================
@@ -282,9 +267,7 @@
 			max-width: 520px;
 		}
 
-		#projects .research-text {
-			flex: 1 1 auto;
-		}
+		#projects .research-text { flex: 1 1 auto; }
 
 		#projects .research-figure {
 			display: block;
@@ -305,9 +288,7 @@
 		}
 
 		#projects a.image:hover img,
-		#projects a.image:hover video {
-			transform: none !important;
-		}
+		#projects a.image:hover video { transform: none !important; }
 
 		#projects .fit-contain img {
 			object-fit: contain;
@@ -315,40 +296,32 @@
 		}
 
 		@media (max-width: 980px) {
-			#projects .research-item {
-				flex-direction: column;
-			}
-			#projects .research-media {
-				flex: 0 0 auto;
-				max-width: none;
-			}
+			#projects .research-item { flex-direction: column; }
+			#projects .research-media { flex: 0 0 auto; max-width: none; }
 		}
 
 		/* ============================================================
-		   SCI COMM: tiny thumbnail under Science Policy
+		   SCI COMM: photo placed under conferences (bigger, clean)
 		   ============================================================ */
-		.scicomm-thumb {
-			width: 70px;        /* MUCH smaller */
-			max-width: 100%;
-			margin: 0.6em 0 0 0;
+		.scicomm-photo {
+			margin: 0.9em 0 0 0;
+			max-width: 320px;      /* feels intentional, not tiny */
 		}
-
-		.scicomm-thumb img {
+		.scicomm-photo img {
 			width: 100%;
 			height: auto;
 			display: block;
-			border-radius: 8px;
+			border-radius: 12px;
 		}
-
-		.scicomm-thumb .scicomm-caption {
-			font-size: 0.8em;
+		.scicomm-caption {
+			font-size: 0.85em;
 			color: rgba(0,0,0,0.6);
-			margin-top: 0.35em;
-			line-height: 1.2;
+			margin-top: 0.45em;
+			line-height: 1.25;
 		}
 
-		.scicomm-thumb.under-policy {
-			margin-top: 0.6em;
+		@media (max-width: 980px) {
+			.scicomm-photo { max-width: 360px; }
 		}
 	</style>
 </head>
@@ -387,22 +360,17 @@
 				</span>
 			</section>
 
-			<!-- =========================
-			     RESEARCH
-			     ========================= -->
 			<section id="projects">
 				<header class="major"><h2>Research</h2></header>
 
 				<div class="research-list">
 
-					<!-- Project 1 -->
 					<article class="research-item">
 						<div class="research-media">
 							<a href="#" class="image research-figure">
 								<img src="images/project_s_isotopes.jpg" alt="Using sulfur isotopes to disentangle sulfur sources in an urban environment" />
 							</a>
 						</div>
-
 						<div class="research-text">
 							<h3>Using S isotopes to disentangle S sources in an urban environment</h3>
 							<p>
@@ -413,14 +381,12 @@
 						</div>
 					</article>
 
-					<!-- Project 2 -->
 					<article class="research-item">
 						<div class="research-media">
 							<a href="#" class="image research-figure fit-contain">
 								<img src="images/project_ascent.png" alt="ASCENT: trace elements during the LA fires plume" />
 							</a>
 						</div>
-
 						<div class="research-text">
 							<h3>ASCENT: Trace elements during the LA fires plume</h3>
 							<p>
@@ -431,7 +397,6 @@
 						</div>
 					</article>
 
-					<!-- Project 3 -->
 					<article class="research-item">
 						<div class="research-media">
 							<a href="#" class="image research-figure">
@@ -440,7 +405,6 @@
 								</video>
 							</a>
 						</div>
-
 						<div class="research-text">
 							<h3>PHOENIX: post-fire air quality impacts during debris removal</h3>
 							<p>
@@ -454,9 +418,6 @@
 				</div>
 			</section>
 
-			<!-- =========================
-			     SCIENCE COMMUNICATION (FIXED + UPDATED)
-			     ========================= -->
 			<section id="science-comm">
 				<header class="major">
 					<h2>Science Communication</h2>
@@ -470,36 +431,24 @@
 
 						<h4>Conferences & Presentations</h4>
 						<ul>
-							<li>
-								<strong>AAAR 2024</strong><br />
-								Albuquerque, NM • Oral Presentation
-							</li>
+							<li><strong>IAC 2022</strong><br />Athens, Greece</li>
+							<li><strong>AAAR 2023</strong><br />Portland, OR • Poster Presentation</li>
 
-							<li>
-								<strong>AGU 2024</strong><br />
-								Washington, DC • Poster Presentation
-							</li>
+							<li><strong>AAAR 2024</strong><br />Albuquerque, NM • Oral Presentation</li>
+							<li><strong>AGU 2024</strong><br />Washington, DC • Poster Presentation</li>
 
-							<li>
-								<strong>AAAR 2025</strong><br />
-								Buffalo, NY • Oral Presentation
-							</li>
+							<li><strong>AAAR 2025</strong><br />Buffalo, NY • Oral Presentation</li>
+							<li><strong>AGU 2025</strong><br />New Orleans, LA • Oral Presentation</li>
 
-							<li>
-								<strong>AGU 2025</strong><br />
-								New Orleans, LA • Oral Presentation
-							</li>
-
-							<li>
-								<strong>LA Fires Conference</strong><br />
-								Poster Presentation
-							</li>
-
-							<li>
-								<strong>ACS</strong><br />
-								Atlanta, GA • Oral Presentation
-							</li>
+							<li><strong>LA Fires Conference</strong><br />Poster Presentation</li>
+							<li><strong>ACS</strong><br />Atlanta, GA • Oral Presentation</li>
 						</ul>
+
+						<!-- Photo placed UNDER conferences (bigger, not tiny) -->
+						<div class="scicomm-photo">
+							<img src="images/aaar24.jpg" alt="Conference presentation photo" />
+							<div class="scicomm-caption">Conference presentation</div>
+						</div>
 					</div>
 
 					<!-- RIGHT: Broader Audiences -->
@@ -569,12 +518,6 @@
 								for policy audiences.
 							</li>
 						</ul>
-
-						<!-- Tiny photo under Science Policy -->
-						<div class="scicomm-thumb under-policy">
-							<img src="images/aaar24.jpg" alt="Conference presentation photo" />
-							<div class="scicomm-caption">Conference presentation</div>
-						</div>
 					</div>
 
 				</div>
