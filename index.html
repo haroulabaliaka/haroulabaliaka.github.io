@@ -354,31 +354,32 @@
 		/* ============================================================
 		   SCI COMM: add a clean conference image block
 		   ============================================================ */
-		.scicomm-figure {
-			margin: 0 0 1.1em 0;
-		}
-		.scicomm-figure img {
-			width: 100%;
-			height: auto;
-			display: block;
-			border-radius: 12px;
-		}
-		.scicomm-caption {
-			font-size: 0.9em;
-			color: rgba(0,0,0,0.6);
-			margin-top: 0.6em;
-			line-height: 1.4;
-		}
-	</style>
-</head>
+		
+/* Small thumbnail (used under Science Policy) */
+.scicomm-thumb {
+	width: 120px;       /* small */
+	max-width: 100%;
+	margin: 0.6em 0 0 0;
+}
 
-<body class="is-preload">
+.scicomm-thumb img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 10px;
+}
 
-<div id="wrapper">
+.scicomm-thumb .scicomm-caption {
+	font-size: 0.85em;
+	color: rgba(0,0,0,0.6);
+	margin-top: 0.45em;
+	line-height: 1.3;
+}
 
-	<!-- MAIN -->
-	<div id="main">
-		<div class="inner">
+/* Optional: a bit more breathing room below the policy list */
+.scicomm-thumb.under-policy {
+	margin-top: 0.8em;
+}
 
 			<!-- HERO BANNER IMAGE -->
 			<div id="hero-banner">
@@ -485,20 +486,35 @@
 			<h3>Scientific Audiences</h3>
 
 			<h4>Conferences & Presentations</h4>
-
-			<div class="scicomm-thumb">
-				<img src="images/aaar24.jpg" alt="Conference presentation photo" />
-			</div>
-
 			<ul>
 				<li>
-					<strong>International Aerosol Conference (IAC) 2022</strong><br />
-					Athens, Greece
+					<strong>AAAR 2024</strong><br />
+					Albuquerque, NM • Oral Presentation
 				</li>
 
 				<li>
-					<strong>American Association for Aerosol Research (AAAR) 2023</strong><br />
-					Portland, OR • Poster Presentation
+					<strong>AGU 2024</strong><br />
+					Washington, DC • Poster Presentation
+				</li>
+
+				<li>
+					<strong>AAAR 2025</strong><br />
+					Buffalo, NY • Oral Presentation
+				</li>
+
+				<li>
+					<strong>AGU 2025</strong><br />
+					New Orleans, LA • Oral Presentation
+				</li>
+
+				<li>
+					<strong>LA Fires Conference</strong><br />
+					Poster Presentation
+				</li>
+
+				<li>
+					<strong>ACS</strong><br />
+					Atlanta, GA • Oral Presentation
 				</li>
 			</ul>
 		</div>
@@ -570,6 +586,13 @@
 					for policy audiences.
 				</li>
 			</ul>
+
+			<!-- Small photo under Science Policy -->
+			<div class="scicomm-thumb under-policy">
+				<img src="images/aaar24.jpg" alt="Conference presentation photo" />
+				<div class="scicomm-caption">Conference presentation</div>
+			</div>
+
 		</div>
 
 	</div>
