@@ -37,6 +37,7 @@
 			display: block;
 		}
 
+		/* Push main content below the hero */
 		#main .inner {
 			padding-top: 1.5em;
 		}
@@ -62,7 +63,7 @@
 		}
 
 		/* =========================
-		   PROFILE HEADER
+		   PROFILE HEADER — avatar + text side by side
 		   ========================= */
 		#sidebar .profile {
 			padding: 1.6em 1.4em 1.1em 1.4em;
@@ -73,10 +74,13 @@
 		}
 
 		#sidebar .avatar {
+			display: block;
+			flex-shrink: 0;
 			width: 58px;
 			height: 58px;
 			border-radius: 10px;
 			overflow: hidden;
+			box-shadow: 0 8px 20px rgba(0,0,0,0.45);
 		}
 
 		#sidebar .avatar img {
@@ -85,28 +89,88 @@
 			object-fit: cover;
 		}
 
+		#sidebar .who h1 {
+			margin: 0;
+			font-size: 1.6em;
+			font-weight: 700;
+			color: #fff;
+			letter-spacing: 0.01em;
+		}
+
+		#sidebar .who p {
+			margin: 0.3em 0 0 0;
+			font-size: 0.78em;
+			color: rgba(255,255,255,0.55);
+			line-height: 1.45;
+		}
+
 		/* =========================
-		   NAVIGATION
+		   NAVIGATION — text only, no icons
 		   ========================= */
 		#sidebar nav#menu header.major {
 			display: none;
 		}
 
+		#sidebar nav#menu ul li {
+			margin: 0;
+		}
+
 		#sidebar nav#menu ul li a {
 			display: block;
 			padding: 0.9em 1.4em;
+			background: rgba(255,255,255,0.02);
+			border-top: 1px solid rgba(255,255,255,0.05);
 			font-size: 0.95em;
+			letter-spacing: 0.04em;
 			text-transform: uppercase;
 			color: rgba(255,255,255,0.65) !important;
+			transition: background 0.2s, color 0.2s;
+		}
+
+		#sidebar nav#menu ul li a:hover {
+			background: rgba(255,255,255,0.07);
+			color: rgba(255,255,255,0.95) !important;
+		}
+
+		#sidebar nav#menu ul li a .nav-icon {
+			display: none;
+		}
+
+		#sidebar .nav-label {
+			font-size: 1em;
+			color: inherit;
 		}
 
 		/* =========================
-		   SOCIAL BAR
+		   SOCIAL ICON BAR
 		   ========================= */
 		#sidebar .social {
 			position: sticky;
 			bottom: 0;
-			padding: 1.2em 1.6em;
+			padding: 1.2em 1.6em 1.4em 1.6em;
+			background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
+			border-top: 1px solid rgba(255,255,255,0.08);
+		}
+
+		#sidebar .social .icons {
+			display: flex;
+			gap: 0.75em;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		#sidebar .social .icons a {
+			width: 42px;
+			height: 42px;
+			border-radius: 12px;
+			background: rgba(255,255,255,0.05);
+			display: grid;
+			place-items: center;
+		}
+
+		#sidebar .social .icons a:hover {
+			background: rgba(255,255,255,0.1);
 		}
 
 		#sidebar #footer {
@@ -114,69 +178,126 @@
 		}
 
 		/* =========================
-		   HAMBURGER COLOR
+		   FIX: HAMBURGER MENU COLOR
 		   ========================= */
 		.toggle:before {
 			color: rgba(20, 22, 28, 0.92) !important;
+			text-shadow: 0 2px 10px rgba(255,255,255,0.25);
+		}
+		.toggle:hover:before {
+			color: #f56a6a !important;
 		}
 
 		/* =========================
-		   SCI COMM COLUMN
+		   SCI COMM: MEDIA COLUMN + SPACING
 		   ========================= */
 		.media-column {
 			border-left: 2px solid rgba(0,0,0,0.08);
 			padding-left: 2em;
+			margin-left: 0.5em;
+		}
+		.media-column ul li {
+			margin-bottom: 1.2em;
+		}
+		.media-column a {
+			font-weight: 600;
+		}
+
+		#science-comm h3 {
+			margin-top: 1.6em;
+		}
+		#science-comm h3:first-child {
+			margin-top: 0;
 		}
 
 		@media (max-width: 980px) {
 			.media-column {
 				border-left: none;
 				padding-left: 0;
+				margin-left: 0;
+				margin-top: 1.5em;
 				border-top: 1px solid rgba(0,0,0,0.08);
 				padding-top: 1.2em;
 			}
 		}
 
 		/* ============================================================
-		   PUSH MENU FIX
+		   PUSH MENU OVERRIDES (THIS IS THE IMPORTANT FIX)
+		   - Sidebar slides in from left
+		   - Main content is pushed right
+		   - Overlay dim layer removed
 		   ============================================================ */
 		@media (max-width: 980px) {
 
-			:root { --sidebarW: 380px; }
+			:root { --sidebarW: 380px; } /* try 340/360/380 */
 
+			/* Remove overlay that hides content */
 			body.is-menu-visible:before {
 				display: none !important;
 			}
 
+			/* Force sidebar width + off-canvas state */
 			#sidebar {
 				width: var(--sidebarW) !important;
 				transform: translateX(calc(-1 * var(--sidebarW))) !important;
 				transition: transform 0.35s ease !important;
+				will-change: transform;
+				z-index: 1 !important; /* behind main once pushed */
 			}
 
+			/* When menu opens, bring sidebar in */
 			body.is-menu-visible #sidebar {
 				transform: translateX(0) !important;
 			}
 
+			/* Push main to the right when menu opens */
 			#main {
+				transform: translateX(0) !important;
 				transition: transform 0.35s ease !important;
+				will-change: transform;
+				position: relative;
 				z-index: 2 !important;
-				background: #fff;
+				background: #fff; /* prevents any transparency weirdness */
 			}
 
 			body.is-menu-visible #main {
 				transform: translateX(var(--sidebarW)) !important;
 			}
 
+			/* Optional: prevent horizontal scroll from the translation */
 			html, body {
 				overflow-x: hidden;
 			}
 		}
 
-		/* =========================
-		   RESEARCH FIXES
-		   ========================= */
+		/* ============================================================
+		   RESEARCH LAYOUT (stacked rows: media left, text right)
+		   - Wide media (16:9)
+		   - No hover-zoom/movement
+		   - Second image uses contain so it doesn't look weird/cropped
+		   ============================================================ */
+		#projects .research-list {
+			display: flex;
+			flex-direction: column;
+			gap: 2.4em;
+		}
 
+		#projects .research-item {
+			display: flex;
+			gap: 2em;
+			align-items: flex-start;
+		}
+
+		#projects .research-media {
+			flex: 0 0 42%;
+			max-width: 520px;
+		}
+
+		#projects .research-text {
+			flex: 1 1 auto;
+		}
+
+		/* Wide frame */
 		#projects .research-figure {
 			display: block;
 			width: 100%;
@@ -185,19 +306,38 @@
 			border-radius: 10px;
 		}
 
+		/* Default behavior: cover (nice for photos + video) */
 		#projects .research-figure img,
 		#projects .research-figure video {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
 			display: block;
-		}
-
-		/* Disable hover zoom from template */
-		#projects .posts .image img,
-		#projects .posts article .image:hover img {
 			transform: none !important;
 			transition: none !important;
+		}
+
+		/* Stop template hover zoom/movement in Research */
+		#projects a.image:hover img,
+		#projects a.image:hover video {
+			transform: none !important;
+		}
+
+		/* For the second project image specifically: avoid awkward crop */
+		#projects .fit-contain img {
+			object-fit: contain;
+			background: rgba(0,0,0,0.04); /* subtle fill so it doesn't look broken */
+		}
+
+		/* Mobile: stack media over text */
+		@media (max-width: 980px) {
+			#projects .research-item {
+				flex-direction: column;
+			}
+			#projects .research-media {
+				flex: 0 0 auto;
+				max-width: none;
+			}
 		}
 	</style>
 </head>
@@ -206,9 +346,11 @@
 
 <div id="wrapper">
 
+	<!-- MAIN -->
 	<div id="main">
 		<div class="inner">
 
+			<!-- HERO BANNER IMAGE -->
 			<div id="hero-banner">
 				<img src="images/hero_banner.jpg" alt="Hero banner" />
 			</div>
@@ -219,56 +361,197 @@
 						<h1>Haroula Baliaka</h1>
 						<p>Atmospheric Chemistry • Air Quality • Urban Fires • Aerosols</p>
 					</header>
-					<p>I'm an Onassis and Resnick Scholar in the final year of my PhD at Caltech...</p>
+					<p>
+						I'm an Onassis and Resnick Scholar in the final year of my PhD at Caltech, where I work with Professors Paul Wennberg, Nga Lee Ng, and Richard Flagan on atmospheric chemistry and air quality. I apply scientific methods and principles to identify, study, and evaluate air pollution problems related to climate change, urban air quality, wildfire smoke, and post-fire impacts on public health.
+					</p>
+					<p>
+						When I first started my PhD, I was drawn to a puzzling question: why does Los Angeles, a city that has spent decades cleaning up its air, still struggle with persistently elevated pollution? I started looking at unique chemical signatures of trace elements and isotopes to identify different air pollution sources.
+					</p>
+					<p>
+						Then, the 2025 Los Angeles fires happened. What had been a study of chronic urban pollution in the LA basin became something much more urgent: understanding the acute, overlapping impacts of wildfire smoke, structural burning, and resuspended ash on communities that were already carrying a disproportionate pollution burden. The fires gave my PhD a new dimension and a sharper sense of purpose.
+					</p>
 				</div>
 				<span class="image object">
 					<img src="images/pic10.jpg" alt="" />
 				</span>
 			</section>
 
+			<!-- =========================
+			     RESEARCH (UPDATED LAYOUT)
+			     ========================= -->
 			<section id="projects">
 				<header class="major"><h2>Research</h2></header>
 
-				<div class="posts research-posts">
+				<div class="research-list">
 
-					<article class="research-card">
-						<a href="#" class="image research-figure">
-							<img src="images/project_s_isotopes.jpg" alt="" />
-						</a>
-						<h3>Using S isotopes to disentangle S sources in an urban environment</h3>
-						<p>Source apportionment in the Los Angeles basin using sulfur isotope signatures...</p>
+					<!-- Project 1 -->
+					<article class="research-item">
+						<div class="research-media">
+							<a href="#" class="image research-figure">
+								<img src="images/project_s_isotopes.jpg" alt="Using sulfur isotopes to disentangle sulfur sources in an urban environment" />
+							</a>
+						</div>
+
+						<div class="research-text">
+							<h3>Using S isotopes to disentangle S sources in an urban environment</h3>
+							<p>
+								Source apportionment in the Los Angeles basin using sulfur isotope signatures and complementary aerosol measurements.
+								This work focuses on separating anthropogenic, marine, and secondary sulfate contributions while linking isotopic
+								variability to meteorology, atmospheric transport, and seasonal patterns.
+							</p>
+						</div>
 					</article>
 
-					<article class="research-card">
-						<a href="#" class="image research-figure">
-							<img src="images/project_ascent.png" alt="" />
-						</a>
-						<h3>ASCENT: Trace elements during the LA fires plume</h3>
-						<p>High-time-resolution elemental measurements used to characterize wildfire plume composition...</p>
+					<!-- Project 2 -->
+					<article class="research-item">
+						<div class="research-media">
+							<a href="#" class="image research-figure fit-contain">
+								<img src="images/project_ascent.png" alt="ASCENT: trace elements during the LA fires plume" />
+							</a>
+						</div>
+
+						<div class="research-text">
+							<h3>ASCENT: Trace elements during the LA fires plume</h3>
+							<p>
+								High-time-resolution elemental measurements used to characterize wildfire plume composition and distinguish
+								fire-enhanced signals from urban background sources. This research highlights the behavior of lead and other
+								trace elements, along with particulate halogens associated with anthropogenic emissions.
+							</p>
+						</div>
 					</article>
 
-					<article class="research-card">
-						<a href="#" class="image research-figure">
-							<video autoplay muted loop playsinline preload="metadata">
-								<source src="images/project_phoenix.mp4" type="video/mp4">
-							</video>
-						</a>
-						<h3>PHOENIX: post-fire air quality impacts during debris removal</h3>
-						<p>Neighborhood-scale monitoring designed to understand post-fire particulate resuspension...</p>
+					<!-- Project 3 -->
+					<article class="research-item">
+						<div class="research-media">
+							<a href="#" class="image research-figure">
+								<video autoplay muted loop playsinline preload="metadata">
+									<source src="images/project_phoenix.mp4" type="video/mp4">
+								</video>
+							</a>
+						</div>
+
+						<div class="research-text">
+							<h3>PHOENIX: post-fire air quality impacts during debris removal</h3>
+							<p>
+								Neighborhood-scale monitoring designed to understand post-fire particulate resuspension, debris removal impacts,
+								and community exposure. This project integrates low-cost sensor networks, indoor–outdoor comparisons, and
+								comparisons with regulatory and satellite-based observations.
+							</p>
+						</div>
 					</article>
 
 				</div>
 			</section>
 
+			<section id="science-comm">
+				<header class="major">
+					<h2>Science Communication</h2>
+				</header>
+
+				<div class="row">
+
+					<div class="col-6 col-12-medium">
+						<h3>Talks & Webinars</h3>
+
+						<ul>
+							<li>
+								<strong>Environmental Impacts of Fires at the Wildland–Urban Interface</strong><br />
+								Caltech Webinar • ~2,000 attendees •
+								<a href="https://scienceexchange.caltech.edu/connect/fires-environmental-impact">Event page</a>
+							</li>
+
+							<li>
+								<strong>Conversations After the Fires: Air Quality and Health</strong><br />
+								Caltech Webinar • ~600 attendees •
+								<a href="https://scienceexchange.caltech.edu/topics/sustainability/ask-expert-sustainability/ask-expert-fires/air-quality-after-the-fires">Event page</a>
+							</li>
+
+							<li>
+								<strong>Three Minute Thesis (3MT) Finalist</strong><br />
+								Talk • Research translation for broad audiences •
+								<a href="https://www.youtube.com/watch?v=3eS2jj8ZltU">Watch</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-6 col-12-medium">
+						<div class="media-column">
+							<h3>Media Coverage</h3>
+
+							<ul>
+								<li>
+									<a href="https://www.nytimes.com/2025/01/20/climate/los-angeles-wildfires-lead-chlorine-air-quality.html">
+										Airborne Lead and Chlorine Levels Soared as L.A. Wildfires Raged
+									</a><br />
+									<em>New York Times</em>
+								</li>
+
+								<li>
+									<a href="https://www.caltech.edu/about/news/phoenix-air-monitoring-project-in-altadena-rises-from-the-ashes">
+										PHOENIX Air Monitoring Project in Altadena Rises from the Ashes
+									</a><br />
+									<em>Caltech News</em>
+								</li>
+
+								<li>
+									<a href="https://www.caltech.edu/about/news/caltech-aerosol-monitoring-site-collects-data-in-aftermath-of-urban-firestorm">
+										Caltech Aerosol Monitoring Site Collects Data in Aftermath of Urban Firestorm
+									</a><br />
+									<em>Caltech News</em>
+								</li>
+
+								<li>
+									<a href="https://www.caltech.edu/about/news/one-year-later-fire-research-continues-to-support-the-community">
+										One Year Later, Fire Research Continues to Support the Community
+									</a><br />
+									<em>Caltech News</em>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row">
+					<div class="col-12">
+						<h3>Science Policy</h3>
+						<ul>
+							<li>
+								<strong>
+									Selected as a 2025 California Council on Science & Technology
+									(<a href="https://ccst.us/about-ccst/">CCST</a>) Science Translator
+								</strong><br />
+								Completed CCST science policy communications training focused on translating research
+								for policy audiences.
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			</section>
+
+			<section id="outreach">
+				<header class="major"><h2>Outreach</h2></header>
+				<p>Community-engaged monitoring, mentoring, and science-policy engagement.</p>
+			</section>
+
+			<section id="contact">
+				<header class="major"><h2>Contact</h2></header>
+				<ul class="contact">
+					<li class="icon solid fa-envelope"><a href="mailto:haroula@caltech.edu">haroula@caltech.edu</a></li>
+				</ul>
+			</section>
+
 		</div>
 	</div>
 
+	<!-- SIDEBAR -->
 	<div id="sidebar">
 		<div class="inner">
 
 			<section class="profile">
 				<span class="avatar">
-					<img src="images/avatar.jpg" alt="" />
+					<img src="images/avatar.jpg" alt="Haroula Baliaka" />
 				</span>
 				<div class="who">
 					<h1>Haroula Baliaka</h1>
@@ -278,10 +561,22 @@
 
 			<nav id="menu">
 				<ul>
-					<li><a href="#banner">About Me</a></li>
-					<li><a href="#projects">Research</a></li>
+					<li><a href="#banner"><span class="nav-label">About Me</span></a></li>
+					<li><a href="#projects"><span class="nav-label">Research</span></a></li>
+					<li><a href="#science-comm"><span class="nav-label">Science Communication</span></a></li>
+					<li><a href="#outreach"><span class="nav-label">Outreach</span></a></li>
+					<li><a href="#contact"><span class="nav-label">Contact</span></a></li>
 				</ul>
 			</nav>
+
+			<div class="social">
+				<ul class="icons">
+					<li><a href="mailto:haroula@caltech.edu" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					<li><a href="https://scholar.google.com/citations?user=AZ6SzzcAAAAJ&hl=en&oi=ao" class="icon solid fa-graduation-cap"><span class="label">Google Scholar</span></a></li>
+					<li><a href="https://github.com/haroulabaliaka" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="https://linkedin.com/in/haroula-baliaka/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				</ul>
+			</div>
 
 		</div>
 	</div>
