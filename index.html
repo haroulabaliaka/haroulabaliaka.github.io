@@ -189,6 +189,33 @@
 		}
 
 		/* =========================
+		   Banner photo (haroula.jpg) SMALLER like ujongebloed
+		   ========================= */
+		#banner .image.object {
+			width: 260px;         /* controls overall size */
+			max-width: 32%;
+			margin-left: 2em;
+			align-self: flex-start; /* don't stretch to match text height */
+		}
+
+		#banner .image.object img {
+			width: 100%;
+			height: auto;
+			border-radius: 12px;
+			display: block;
+		}
+
+		@media (max-width: 980px) {
+			#banner .image.object {
+				width: 220px;
+				max-width: 100%;
+				margin-left: 0;
+				margin-top: 1.25em;
+				align-self: auto;
+			}
+		}
+
+		/* =========================
 		   SCI COMM: MEDIA COLUMN + SPACING
 		   ========================= */
 		.media-column {
@@ -223,48 +250,40 @@
 
 		/* ============================================================
 		   PUSH MENU OVERRIDES (THIS IS THE IMPORTANT FIX)
-		   - Sidebar slides in from left
-		   - Main content is pushed right
-		   - Overlay dim layer removed
 		   ============================================================ */
 		@media (max-width: 980px) {
 
 			:root { --sidebarW: 380px; } /* try 340/360/380 */
 
-			/* Remove overlay that hides content */
 			body.is-menu-visible:before {
 				display: none !important;
 			}
 
-			/* Force sidebar width + off-canvas state */
 			#sidebar {
 				width: var(--sidebarW) !important;
 				transform: translateX(calc(-1 * var(--sidebarW))) !important;
 				transition: transform 0.35s ease !important;
 				will-change: transform;
-				z-index: 1 !important; /* behind main once pushed */
+				z-index: 1 !important;
 			}
 
-			/* When menu opens, bring sidebar in */
 			body.is-menu-visible #sidebar {
 				transform: translateX(0) !important;
 			}
 
-			/* Push main to the right when menu opens */
 			#main {
 				transform: translateX(0) !important;
 				transition: transform 0.35s ease !important;
 				will-change: transform;
 				position: relative;
 				z-index: 2 !important;
-				background: #fff; /* prevents any transparency weirdness */
+				background: #fff;
 			}
 
 			body.is-menu-visible #main {
 				transform: translateX(var(--sidebarW)) !important;
 			}
 
-			/* Optional: prevent horizontal scroll from the translation */
 			html, body {
 				overflow-x: hidden;
 			}
@@ -272,9 +291,6 @@
 
 		/* ============================================================
 		   RESEARCH LAYOUT (stacked rows: media left, text right)
-		   - Wide media (16:9)
-		   - No hover-zoom/movement
-		   - Second image uses contain so it doesn't look weird/cropped
 		   ============================================================ */
 		#projects .research-list {
 			display: flex;
@@ -297,7 +313,6 @@
 			flex: 1 1 auto;
 		}
 
-		/* Wide frame */
 		#projects .research-figure {
 			display: block;
 			width: 100%;
@@ -306,7 +321,6 @@
 			border-radius: 10px;
 		}
 
-		/* Default behavior: cover (nice for photos + video) */
 		#projects .research-figure img,
 		#projects .research-figure video {
 			width: 100%;
@@ -317,19 +331,16 @@
 			transition: none !important;
 		}
 
-		/* Stop template hover zoom/movement in Research */
 		#projects a.image:hover img,
 		#projects a.image:hover video {
 			transform: none !important;
 		}
 
-		/* For the second project image specifically: avoid awkward crop */
 		#projects .fit-contain img {
 			object-fit: contain;
-			background: rgba(0,0,0,0.04); /* subtle fill so it doesn't look broken */
+			background: rgba(0,0,0,0.04);
 		}
 
-		/* Mobile: stack media over text */
 		@media (max-width: 980px) {
 			#projects .research-item {
 				flex-direction: column;
@@ -338,6 +349,25 @@
 				flex: 0 0 auto;
 				max-width: none;
 			}
+		}
+
+		/* ============================================================
+		   SCI COMM: add a clean conference image block
+		   ============================================================ */
+		.scicomm-figure {
+			margin: 0 0 1.1em 0;
+		}
+		.scicomm-figure img {
+			width: 100%;
+			height: auto;
+			display: block;
+			border-radius: 12px;
+		}
+		.scicomm-caption {
+			font-size: 0.9em;
+			color: rgba(0,0,0,0.6);
+			margin-top: 0.6em;
+			line-height: 1.4;
 		}
 	</style>
 </head>
@@ -377,7 +407,7 @@
 			</section>
 
 			<!-- =========================
-			     RESEARCH (UPDATED LAYOUT)
+			     RESEARCH
 			     ========================= -->
 			<section id="projects">
 				<header class="major"><h2>Research</h2></header>
@@ -443,6 +473,9 @@
 				</div>
 			</section>
 
+			<!-- =========================
+			     SCIENCE COMMUNICATION (SPLIT)
+			     ========================= -->
 			<section id="science-comm">
 				<header class="major">
 					<h2>Science Communication</h2>
@@ -450,9 +483,11 @@
 
 				<div class="row">
 
+					<!-- Broader audiences (your existing content) -->
 					<div class="col-6 col-12-medium">
-						<h3>Talks & Webinars</h3>
+						<h3>Broader Audiences</h3>
 
+						<h4>Talks & Webinars</h4>
 						<ul>
 							<li>
 								<strong>Environmental Impacts of Fires at the Wildland–Urban Interface</strong><br />
@@ -472,49 +507,39 @@
 								<a href="https://www.youtube.com/watch?v=3eS2jj8ZltU">Watch</a>
 							</li>
 						</ul>
-					</div>
 
-					<div class="col-6 col-12-medium">
-						<div class="media-column">
-							<h3>Media Coverage</h3>
+						<h4>Media Coverage</h4>
+						<ul>
+							<li>
+								<a href="https://www.nytimes.com/2025/01/20/climate/los-angeles-wildfires-lead-chlorine-air-quality.html">
+									Airborne Lead and Chlorine Levels Soared as L.A. Wildfires Raged
+								</a><br />
+								<em>New York Times</em>
+							</li>
 
-							<ul>
-								<li>
-									<a href="https://www.nytimes.com/2025/01/20/climate/los-angeles-wildfires-lead-chlorine-air-quality.html">
-										Airborne Lead and Chlorine Levels Soared as L.A. Wildfires Raged
-									</a><br />
-									<em>New York Times</em>
-								</li>
+							<li>
+								<a href="https://www.caltech.edu/about/news/phoenix-air-monitoring-project-in-altadena-rises-from-the-ashes">
+									PHOENIX Air Monitoring Project in Altadena Rises from the Ashes
+								</a><br />
+								<em>Caltech News</em>
+							</li>
 
-								<li>
-									<a href="https://www.caltech.edu/about/news/phoenix-air-monitoring-project-in-altadena-rises-from-the-ashes">
-										PHOENIX Air Monitoring Project in Altadena Rises from the Ashes
-									</a><br />
-									<em>Caltech News</em>
-								</li>
+							<li>
+								<a href="https://www.caltech.edu/about/news/caltech-aerosol-monitoring-site-collects-data-in-aftermath-of-urban-firestorm">
+									Caltech Aerosol Monitoring Site Collects Data in Aftermath of Urban Firestorm
+								</a><br />
+								<em>Caltech News</em>
+							</li>
 
-								<li>
-									<a href="https://www.caltech.edu/about/news/caltech-aerosol-monitoring-site-collects-data-in-aftermath-of-urban-firestorm">
-										Caltech Aerosol Monitoring Site Collects Data in Aftermath of Urban Firestorm
-									</a><br />
-									<em>Caltech News</em>
-								</li>
+							<li>
+								<a href="https://www.caltech.edu/about/news/one-year-later-fire-research-continues-to-support-the-community">
+									One Year Later, Fire Research Continues to Support the Community
+								</a><br />
+								<em>Caltech News</em>
+							</li>
+						</ul>
 
-								<li>
-									<a href="https://www.caltech.edu/about/news/one-year-later-fire-research-continues-to-support-the-community">
-										One Year Later, Fire Research Continues to Support the Community
-									</a><br />
-									<em>Caltech News</em>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="row">
-					<div class="col-12">
-						<h3>Science Policy</h3>
+						<h4>Science Policy</h4>
 						<ul>
 							<li>
 								<strong>
@@ -526,8 +551,36 @@
 							</li>
 						</ul>
 					</div>
-				</div>
 
+					<!-- Scientific audiences (NEW) -->
+					<div class="col-6 col-12-medium">
+						<div class="media-column">
+							<h3>Scientific Audiences</h3>
+
+							<div class="scicomm-figure">
+								<img src="images/aaar24.jpg" alt="Conference presentation photo" />
+								<div class="scicomm-caption">
+									Selected conference presentations and invited talks.
+								</div>
+							</div>
+
+							<h4>Conferences & Presentations</h4>
+							<ul>
+								<li>
+									<strong>American Association for Aerosol Research (AAAR) — 42nd Annual Conference</strong><br />
+									Albuquerque, NM • Oct 21–25, 2024 • Oral/Poster presentation
+								</li>
+								<!-- Add more like this:
+								<li>
+									<strong>Conference Name</strong><br />
+									City, Country • Month Year • Oral/Poster/Invited
+								</li>
+								-->
+							</ul>
+						</div>
+					</div>
+
+				</div>
 			</section>
 
 			<section id="outreach">
