@@ -11,6 +11,30 @@
 
 	<style>
 		/* =========================
+		   HERO BANNER IMAGE
+		   ========================= */
+		#hero-banner {
+			width: 100%;
+			height: 220px;
+			overflow: hidden;
+			position: relative;
+			margin-bottom: 0;
+		}
+
+		#hero-banner img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+			display: block;
+		}
+
+		/* Push main content below the hero */
+		#main .inner {
+			padding-top: 1.5em;
+		}
+
+		/* =========================
 		   DARK SIDEBAR BACKGROUND
 		   ========================= */
 		#sidebar {
@@ -31,22 +55,21 @@
 		}
 
 		/* =========================
-		   PROFILE HEADER
+		   PROFILE HEADER — smaller avatar
 		   ========================= */
 		#sidebar .profile {
-			padding: 2.2em 1.6em 1.3em 1.6em;
+			padding: 1.6em 1.4em 1.1em 1.4em;
 			border-bottom: 1px solid rgba(255,255,255,0.08);
 		}
 
 		#sidebar .avatar {
-			display: inline-block;
-			width: 86px;
-			height: 86px;
-			border-radius: 14px;
+			display: block;
+			width: 58px;
+			height: 58px;
+			border-radius: 10px;
 			overflow: hidden;
-			margin-right: 1em;
-			vertical-align: middle;
-			box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+			margin-bottom: 0.75em;
+			box-shadow: 0 8px 20px rgba(0,0,0,0.45);
 		}
 
 		#sidebar .avatar img {
@@ -55,26 +78,21 @@
 			object-fit: cover;
 		}
 
-		#sidebar .who {
-			display: inline-block;
-			vertical-align: middle;
-		}
-
 		#sidebar .who h1 {
 			margin: 0;
-			font-size: 1.55em;
+			font-size: 1.25em;
 			color: #fff;
 		}
 
 		#sidebar .who p {
-			margin: 0.35em 0 0 0;
-			font-size: 0.9em;
-			color: rgba(255,255,255,0.6);
+			margin: 0.3em 0 0 0;
+			font-size: 0.82em;
+			color: rgba(255,255,255,0.55);
 			line-height: 1.45;
 		}
 
 		/* =========================
-		   NAVIGATION ROWS
+		   NAVIGATION — text only, no icons
 		   ========================= */
 		#sidebar nav#menu header.major {
 			display: none;
@@ -85,35 +103,30 @@
 		}
 
 		#sidebar nav#menu ul li a {
-			display: flex;
-			align-items: center;
-			gap: 1em;
-			padding: 1.15em 1.35em;
-			min-height: 70px;
-			background: rgba(255,255,255,0.03);
+			display: block;
+			padding: 0.9em 1.4em;
+			background: rgba(255,255,255,0.02);
 			border-top: 1px solid rgba(255,255,255,0.05);
+			font-size: 0.95em;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			color: rgba(255,255,255,0.65) !important;
+			transition: background 0.2s, color 0.2s;
 		}
 
 		#sidebar nav#menu ul li a:hover {
 			background: rgba(255,255,255,0.07);
+			color: rgba(255,255,255,0.95) !important;
 		}
 
-		#sidebar .nav-icon {
-			width: 40px;
-			height: 40px;
-			border-radius: 10px;
-			background: rgba(255,255,255,0.05);
-			display: grid;
-			place-items: center;
-		}
-
-		#sidebar .nav-icon i {
-			color: rgba(255,255,255,0.55);
+		/* Hide the icon spans inside nav links */
+		#sidebar nav#menu ul li a .nav-icon {
+			display: none;
 		}
 
 		#sidebar .nav-label {
-			font-size: 1.05em;
-			color: rgba(255,255,255,0.75);
+			font-size: 1em;
+			color: inherit;
 		}
 
 		/* =========================
@@ -159,6 +172,11 @@
 	<div id="main">
 		<div class="inner">
 
+			<!-- HERO BANNER IMAGE -->
+			<div id="hero-banner">
+				<img src="images/hero_banner.jpg" alt="Hero banner" />
+			</div>
+
 			<header id="header">
 				<a href="index.html" class="logo"><strong>Haroula Baliaka</strong></a>
 				<ul class="icons">
@@ -178,7 +196,7 @@
 			<section id="banner">
 				<div class="content">
 					<header>
-						<h1>Hi, I’m Haroula Baliaka</h1>
+						<h1>Hi, I'm Haroula Baliaka</h1>
 						<p>Atmospheric Chemistry • Air Quality • Aerosols</p>
 					</header>
 					<p>
@@ -255,12 +273,12 @@
 
 			<nav id="menu">
 				<ul>
-					<li><a href="#banner"><span class="nav-icon"><i class="icon solid fa-home"></i></span><span class="nav-label">Intro</span></a></li>
-					<li><a href="#about"><span class="nav-icon"><i class="icon solid fa-user"></i></span><span class="nav-label">About Me</span></a></li>
-					<li><a href="#projects"><span class="nav-icon"><i class="icon solid fa-th"></i></span><span class="nav-label">Projects</span></a></li>
-					<li><a href="#science-comm"><span class="nav-icon"><i class="icon solid fa-bullhorn"></i></span><span class="nav-label">Science Communication</span></a></li>
-					<li><a href="#outreach"><span class="nav-icon"><i class="icon solid fa-hands-helping"></i></span><span class="nav-label">Outreach</span></a></li>
-					<li><a href="#contact"><span class="nav-icon"><i class="icon solid fa-envelope"></i></span><span class="nav-label">Contact</span></a></li>
+					<li><a href="#banner"><span class="nav-label">Intro</span></a></li>
+					<li><a href="#about"><span class="nav-label">About Me</span></a></li>
+					<li><a href="#projects"><span class="nav-label">Projects</span></a></li>
+					<li><a href="#science-comm"><span class="nav-label">Science Communication</span></a></li>
+					<li><a href="#outreach"><span class="nav-label">Outreach</span></a></li>
+					<li><a href="#contact"><span class="nav-label">Contact</span></a></li>
 				</ul>
 			</nav>
 
