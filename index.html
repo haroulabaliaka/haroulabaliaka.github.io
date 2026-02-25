@@ -174,63 +174,6 @@
 		#sidebar #footer {
 			display: none;
 		}
-
-		/* =========================
-		   SIDEBAR TOGGLE (HAMBURGER) — dark on light bg
-		   ========================= */
-		#sidebar .toggle {
-			background: #1c1f27 !important;
-			color: #fff !important;
-		}
-
-		#sidebar .toggle::before {
-			color: #fff !important;
-		}
-
-		#sidebar .toggle:hover {
-			background: #2a2e38 !important;
-		}
-
-		/* =========================
-		   HAMBURGER BUTTON (main area)
-		   ========================= */
-		#hamburger-toggle {
-			position: fixed;
-			top: 1rem;
-			left: 1rem;
-			z-index: 10001;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			gap: 5px;
-			width: 42px;
-			height: 42px;
-			background: transparent;
-			border: none;
-			cursor: pointer;
-			text-decoration: none;
-		}
-
-		#hamburger-toggle span {
-			display: block;
-			width: 22px;
-			height: 2px;
-			background: #1c1f27;
-			border-radius: 2px;
-			transition: transform 0.3s, opacity 0.3s;
-		}
-
-		#hamburger-toggle:hover span {
-			background: #3a3f4b;
-		}
-
-		/* Hide when sidebar is visible on large screens */
-		@media screen and (min-width: 1281px) {
-			#hamburger-toggle {
-				display: none;
-			}
-		}
 	</style>
 </head>
 
@@ -240,14 +183,6 @@
 
 	<!-- MAIN -->
 	<div id="main">
-
-		<!-- HAMBURGER BUTTON -->
-		<a href="#sidebar" id="hamburger-toggle" aria-label="Toggle sidebar">
-			<span></span>
-			<span></span>
-			<span></span>
-		</a>
-
 		<div class="inner">
 
 			<!-- HERO BANNER IMAGE -->
@@ -305,7 +240,7 @@
 			<section id="contact">
 				<header class="major"><h2>Contact</h2></header>
 				<ul class="contact">
-					<li class="icon solid fa-envelope"><a href="/cdn-cgi/l/email-protection#177f766578627b765774767b6372747f39727362"><span class="__cf_email__" data-cfemail="ee868f9c819b828fae8d8f829a8b8d86c08b8a9b">[email&#160;protected]</span></a></li>
+					<li class="icon solid fa-envelope"><a href="mailto:haroula@caltech.edu">haroula@caltech.edu</a></li>
 				</ul>
 			</section>
 
@@ -340,7 +275,7 @@
 
 			<div class="social">
 				<ul class="icons">
-					<li><a href="/cdn-cgi/l/email-protection#4d252c3f2238212c0d2e2c2139282e2563282938" class="icon solid fa-envelope"></a></li>
+					<li><a href="mailto:haroula@caltech.edu" class="icon solid fa-envelope"></a></li>
 					<li><a href="https://scholar.google.com/citations?user=AZ6SzzcAAAAJ&hl=en&oi=ao" class="icon solid fa-graduation-cap"></a></li>
 					<li><a href="https://github.com/haroulabaliaka" class="icon brands fa-github"></a></li>
 					<li><a href="https://linkedin.com/in/haroula-baliaka/" class="icon brands fa-linkedin"></a></li>
@@ -352,12 +287,11 @@
 
 </div>
 
-<script>
-	document.getElementById('hamburger-toggle').addEventListener('click', function(e) {
-		e.preventDefault();
-		e.stopPropagation();
-		document.getElementById('sidebar').classList.toggle('inactive');
-	});
-</script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-sta
+</body>
+</html>
