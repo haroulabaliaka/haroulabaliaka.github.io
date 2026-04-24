@@ -1,7 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP - Updated with restructured navigation
--->
 <html>
 <head>
 	<title>Haroula Baliaka</title>
@@ -11,295 +8,60 @@
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
 	<style>
-		/* =========================
-		   GLOBAL FONT
-		   ========================= */
-		body, h1, h2, h3, h4, p, a, li, span {
-			font-family: 'Raleway', sans-serif !important;
-		}
-
-		/* =========================
-		   HERO BANNER IMAGE
-		   ========================= */
-		#hero-banner {
-			width: 100%;
-			height: 220px;
-			overflow: hidden;
-			position: relative;
-			margin-bottom: 0;
-		}
-
-		#hero-banner img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center center;
-			display: block;
-		}
-
-		/* Push main content below the hero */
-		#main .inner {
-			padding-top: 1.5em;
-		}
-
-		/* =========================
-		   DARK SIDEBAR BACKGROUND
-		   ========================= */
-		#sidebar {
-			background: linear-gradient(
-				180deg,
-				#14161c 0%,
-				#1c1f27 45%,
-				#0f1116 100%
-			) !important;
-			color: rgba(255,255,255,0.75);
-		}
-
-		#sidebar h1,
-		#sidebar h2,
-		#sidebar h3,
-		#sidebar a {
-			color: rgba(255,255,255,0.85) !important;
-		}
-
-		/* =========================
-		   PROFILE HEADER — avatar + text side by side
-		   ========================= */
-		#sidebar .profile {
-			padding: 1.6em 1.4em 1.1em 1.4em;
-			border-bottom: 1px solid rgba(255,255,255,0.08);
-			display: flex;
-			align-items: center;
-			gap: 1em;
-		}
-
-		#sidebar .avatar {
-			display: block;
-			flex-shrink: 0;
-			width: 58px;
-			height: 58px;
-			border-radius: 10px;
-			overflow: hidden;
-			box-shadow: 0 8px 20px rgba(0,0,0,0.45);
-		}
-
-		#sidebar .avatar img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-		}
-
-		#sidebar .who h1 {
-			margin: 0;
-			font-size: 1.6em;
-			font-weight: 700;
-			color: #fff;
-			letter-spacing: 0.01em;
-		}
-
-		#sidebar .who p {
-			margin: 0.3em 0 0 0;
-			font-size: 0.78em;
-			color: rgba(255,255,255,0.55);
-			line-height: 1.45;
-		}
-
-		/* =========================
-		   NAVIGATION — text only, no icons
-		   ========================= */
-		#sidebar nav#menu header.major {
-			display: none;
-		}
-
-		#sidebar nav#menu ul li {
-			margin: 0;
-		}
-
-		#sidebar nav#menu ul li a {
-			display: block;
-			padding: 0.9em 1.4em;
-			background: rgba(255,255,255,0.02);
-			border-top: 1px solid rgba(255,255,255,0.05);
-			font-size: 0.95em;
-			letter-spacing: 0.04em;
-			text-transform: uppercase;
-			color: rgba(255,255,255,0.65) !important;
-			transition: background 0.2s, color 0.2s;
-		}
-
-		#sidebar nav#menu ul li a:hover {
-			background: rgba(255,255,255,0.07);
-			color: rgba(255,255,255,0.95) !important;
-		}
-
-		#sidebar nav#menu ul li a .nav-icon {
-			display: none;
-		}
-
-		#sidebar .nav-label {
-			font-size: 1em;
-			color: inherit;
-		}
-
-		/* =========================
-		   SOCIAL ICON BAR
-		   ========================= */
-		#sidebar .social {
-			position: sticky;
-			bottom: 0;
-			padding: 1.2em 1.6em 1.4em 1.6em;
-			background: linear-gradient(to top, rgba(0,0,0,0.55), transparent);
-			border-top: 1px solid rgba(255,255,255,0.08);
-		}
-
-		#sidebar .social .icons {
-			display: flex;
-			gap: 0.75em;
-			margin: 0;
-			padding: 0;
-			list-style: none;
-		}
-
-		#sidebar .social .icons a {
-			width: 42px;
-			height: 42px;
-			border-radius: 12px;
-			background: rgba(255,255,255,0.05);
-			display: grid;
-			place-items: center;
-		}
-
-		#sidebar .social .icons a:hover {
-			background: rgba(255,255,255,0.1);
-		}
-
-		#sidebar #footer {
-			display: none;
-		}
-
-		/* =========================
-		   FIX: HAMBURGER MENU COLOR
-		   ========================= */
-		.toggle:before {
-			color: rgba(20, 22, 28, 0.92) !important;
-			text-shadow: 0 2px 10px rgba(255,255,255,0.25);
-		}
-		.toggle:hover:before {
-			color: #f56a6a !important;
-		}
-
-		/* =========================
-		   Banner photo (haroula.jpg) SMALLER like ujongebloed
-		   ========================= */
-		#banner .image.object {
-			width: 240px;
-			max-width: 30%;
-			margin-left: 2em;
-			align-self: flex-start;
-		}
-
-		#banner .image.object img {
-			width: 100%;
-			height: auto;
-			border-radius: 12px;
-			display: block;
-		}
-
+		body, h1, h2, h3, h4, p, a, li, span { font-family: 'Raleway', sans-serif !important; }
+		#hero-banner { width: 100%; height: 220px; overflow: hidden; position: relative; margin-bottom: 0; }
+		#hero-banner img { width: 100%; height: 100%; object-fit: cover; object-position: center center; display: block; }
+		#main .inner { padding-top: 1.5em; }
+		#sidebar { background: linear-gradient(180deg, #14161c 0%, #1c1f27 45%, #0f1116 100%) !important; color: rgba(255,255,255,0.75); }
+		#sidebar h1, #sidebar h2, #sidebar h3, #sidebar a { color: rgba(255,255,255,0.85) !important; }
+		#sidebar .profile { padding: 1.6em 1.4em 1.1em 1.4em; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; gap: 1em; }
+		#sidebar .avatar { display: block; flex-shrink: 0; width: 58px; height: 58px; border-radius: 10px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.45); }
+		#sidebar .avatar img { width: 100%; height: 100%; object-fit: cover; }
+		#sidebar .who h1 { margin: 0; font-size: 1.6em; font-weight: 700; color: #fff; letter-spacing: 0.01em; }
+		#sidebar .who p { margin: 0.3em 0 0 0; font-size: 0.78em; color: rgba(255,255,255,0.55); line-height: 1.45; }
+		#sidebar nav#menu header.major { display: none; }
+		#sidebar nav#menu ul li { margin: 0; }
+		#sidebar nav#menu ul li a { display: block; padding: 0.9em 1.4em; background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.95em; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(255,255,255,0.65) !important; transition: background 0.2s, color 0.2s; cursor: pointer; }
+		#sidebar nav#menu ul li a:hover { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.95) !important; }
+		#sidebar nav#menu ul li a .nav-icon { display: none; }
+		#sidebar .nav-label { font-size: 1em; color: inherit; }
+		#sidebar .social { position: sticky; bottom: 0; padding: 1.2em 1.6em 1.4em 1.6em; background: linear-gradient(to top, rgba(0,0,0,0.55), transparent); border-top: 1px solid rgba(255,255,255,0.08); }
+		#sidebar .social .icons { display: flex; gap: 0.75em; margin: 0; padding: 0; list-style: none; }
+		#sidebar .social .icons a { width: 42px; height: 42px; border-radius: 12px; background: rgba(255,255,255,0.05); display: grid; place-items: center; }
+		#sidebar .social .icons a:hover { background: rgba(255,255,255,0.1); }
+		#sidebar #footer { display: none; }
+		.toggle:before { color: rgba(20, 22, 28, 0.92) !important; text-shadow: 0 2px 10px rgba(255,255,255,0.25); }
+		.toggle:hover:before { color: #f56a6a !important; }
+		#banner .image.object { width: 240px; max-width: 30%; margin-left: 2em; align-self: flex-start; }
+		#banner .image.object img { width: 100%; height: auto; border-radius: 12px; display: block; }
+		
+		/* Page sections */
+		.page-section { display: none; }
+		.page-section.active { display: block; }
+		
+		.research-list { display: flex; flex-direction: column; gap: 2.4em; }
+		.research-item { display: flex; gap: 2em; align-items: flex-start; }
+		.research-media { flex: 0 0 42%; max-width: 520px; }
+		.research-text { flex: 1 1 auto; }
+		.research-figure { display: block; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 10px; }
+		.research-figure img, .research-figure video { width: 100%; height: 100%; object-fit: cover; display: block; }
+		.fit-contain img { object-fit: contain; background: rgba(0,0,0,0.04); }
+		
+		.row { display: grid; grid-template-columns: 1fr 1fr; gap: 2em; }
+		
 		@media (max-width: 980px) {
-			#banner .image.object {
-				width: 200px;
-				max-width: 100%;
-				margin-left: 0;
-				margin-top: 1.25em;
-				align-self: auto;
-			}
-		}
-
-		/* ============================================================
-		   PUSH MENU OVERRIDES (THIS IS THE IMPORTANT FIX)
-		   ============================================================ */
-		@media (max-width: 980px) {
+			#banner .image.object { width: 200px; max-width: 100%; margin-left: 0; margin-top: 1.25em; align-self: auto; }
 			:root { --sidebarW: 380px; }
-
 			body.is-menu-visible:before { display: none !important; }
-
-			#sidebar {
-				width: var(--sidebarW) !important;
-				transform: translateX(calc(-1 * var(--sidebarW))) !important;
-				transition: transform 0.35s ease !important;
-				will-change: transform;
-				z-index: 1 !important;
-			}
-
+			#sidebar { width: var(--sidebarW) !important; transform: translateX(calc(-1 * var(--sidebarW))) !important; transition: transform 0.35s ease !important; z-index: 1 !important; }
 			body.is-menu-visible #sidebar { transform: translateX(0) !important; }
-
-			#main {
-				transform: translateX(0) !important;
-				transition: transform 0.35s ease !important;
-				will-change: transform;
-				position: relative;
-				z-index: 2 !important;
-				background: #fff;
-			}
-
+			#main { transform: translateX(0) !important; transition: transform 0.35s ease !important; z-index: 2 !important; background: #fff; }
 			body.is-menu-visible #main { transform: translateX(var(--sidebarW)) !important; }
-
 			html, body { overflow-x: hidden; }
+			.research-item { flex-direction: column; }
+			.research-media { flex: 0 0 auto; max-width: none; }
+			.row { grid-template-columns: 1fr; }
 		}
-
-		/* ============================================================
-		   RESEARCH LAYOUT (stacked rows: media left, text right)
-		   ============================================================ */
-		#projects .research-list {
-			display: flex;
-			flex-direction: column;
-			gap: 2.4em;
-		}
-
-		#projects .research-item {
-			display: flex;
-			gap: 2em;
-			align-items: flex-start;
-		}
-
-		#projects .research-media {
-			flex: 0 0 42%;
-			max-width: 520px;
-		}
-
-		#projects .research-text { flex: 1 1 auto; }
-
-		#projects .research-figure {
-			display: block;
-			width: 100%;
-			aspect-ratio: 16 / 9;
-			overflow: hidden;
-			border-radius: 10px;
-		}
-
-		#projects .research-figure img,
-		#projects .research-figure video {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			display: block;
-			transform: none !important;
-			transition: none !important;
-		}
-
-		#projects a.image:hover img,
-		#projects a.image:hover video { transform: none !important; }
-
-		#projects .fit-contain img {
-			object-fit: contain;
-			background: rgba(0,0,0,0.04);
-		}
-
-		@media (max-width: 980px) {
-			#projects .research-item { flex-direction: column; }
-			#projects .research-media { flex: 0 0 auto; max-width: none; }
-		}
-
 	</style>
 </head>
 
@@ -307,336 +69,221 @@
 
 <div id="wrapper">
 
-	<!-- MAIN -->
 	<div id="main">
 		<div class="inner">
 
-			<!-- HERO BANNER IMAGE -->
-			<div id="hero-banner">
-				<img src="images/hero_banner.jpg" alt="Hero banner" />
+			<!-- ABOUT PAGE -->
+			<div id="about-page" class="page-section active">
+				<div id="hero-banner">
+					<img src="images/hero_banner.jpg" alt="Hero banner" />
+				</div>
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h1>Haroula Baliaka</h1>
+							<p>Atmospheric Chemistry • Air Quality • Urban Fires • Aerosols</p>
+						</header>
+						<p>
+							I'm an Onassis and Resnick Scholar in the final year of my PhD at Caltech, where I work with Professors Paul Wennberg, Nga Lee Ng, and Richard Flagan on atmospheric chemistry and air quality. I apply scientific methods and principles to identify, study, and evaluate air pollution problems related to climate change, urban air quality, wildfire smoke, and post-fire impacts on public health.
+						</p>
+						<p>
+							When I first started my PhD, I was drawn to a puzzling question: why does Los Angeles, a city that has spent decades cleaning up its air, still struggle with persistently elevated pollution? I started looking at unique chemical signatures of trace elements and isotopes to identify different air pollution sources.
+						</p>
+						<p>
+							Then, the 2025 Los Angeles fires happened. What had been a study of chronic urban pollution in the LA basin became something much more urgent: understanding the acute, overlapping impacts of wildfire smoke, structural burning, and resuspended ash on communities that were already carrying a disproportionate pollution burden. The fires gave my PhD a new dimension and a sharper sense of purpose.
+						</p>
+					</div>
+					<span class="image object">
+						<img src="images/haroula.jpg" alt="" />
+					</span>
+				</section>
 			</div>
 
-			<section id="banner">
-				<div class="content">
-					<header>
-						<h1>Haroula Baliaka</h1>
-						<p>Atmospheric Chemistry • Air Quality • Urban Fires • Aerosols</p>
-					</header>
-					<p>
-						I'm an Onassis and Resnick Scholar in the final year of my PhD at Caltech, where I work with Professors Paul Wennberg, Nga Lee Ng, and Richard Flagan on atmospheric chemistry and air quality. I apply scientific methods and principles to identify, study, and evaluate air pollution problems related to climate change, urban air quality, wildfire smoke, and post-fire impacts on public health.
-					</p>
-					<p>
-						When I first started my PhD, I was drawn to a puzzling question: why does Los Angeles, a city that has spent decades cleaning up its air, still struggle with persistently elevated pollution? I started looking at unique chemical signatures of trace elements and isotopes to identify different air pollution sources.
-					</p>
-					<p>
-						Then, the 2025 Los Angeles fires happened. What had been a study of chronic urban pollution in the LA basin became something much more urgent: understanding the acute, overlapping impacts of wildfire smoke, structural burning, and resuspended ash on communities that were already carrying a disproportionate pollution burden. The fires gave my PhD a new dimension and a sharper sense of purpose.
-					</p>
-				</div>
-				<span class="image object">
-					<img src="images/haroula.jpg" alt="" />
-				</span>
-			</section>
-
-			<section id="projects">
-				<header class="major"><h2>Research</h2></header>
-
-				<div class="research-list">
-
-					<article class="research-item">
-						<div class="research-media">
-							<a href="#" class="image research-figure">
-								<img src="images/project_s_isotopes.jpg" alt="Using sulfur isotopes to disentangle sulfur sources in an urban environment" />
-							</a>
-						</div>
-						<div class="research-text">
-							<h3>Using S isotopes to disentangle S sources in an urban environment</h3>
-							<p>
-								Source apportionment in the Los Angeles basin using sulfur isotope signatures and complementary aerosol measurements. Funded by the Resnick Sustainability Institute.
-							</p>
-						</div>
-					</article>
-
-					<article class="research-item">
-						<div class="research-media">
-							<a href="#" class="image research-figure fit-contain">
-								<img src="images/project_ascent.png" alt="ASCENT: trace elements during the LA fires plume" />
-							</a>
-						</div>
-						<div class="research-text">
-							<h3>ASCENT: Trace elements during the LA fires plume</h3>
-							<p>
-								High-time-resolution elemental measurements used to characterize wildfire plume composition and distinguish fire-enhanced signals from urban background sources. Part of the NSF Atmospheric Science and Chemistry mEasurement NeTwork spanning 12 institutions.
-							</p>
-						</div>
-					</article>
-
-					<article class="research-item">
-						<div class="research-media">
-							<a href="#" class="image research-figure">
-								<video autoplay muted loop playsinline preload="metadata">
-									<source src="images/project_phoenix.mp4" type="video/mp4">
-								</video>
-							</a>
-						</div>
-						<div class="research-text">
-							<h3>PHOENIX: post-fire air quality impacts during debris removal</h3>
-							<p>
-								Neighborhood-scale monitoring designed to understand post-fire particulate resuspension, debris removal impacts, and community exposure. Deployed following the 2025 Eaton Fire in Altadena; generated 11,000+ website views and provided critical data to community members and LA County Public Health.
-							</p>
-						</div>
-					</article>
-
-				</div>
-			</section>
-
-			<section id="publications">
-				<header class="major">
-					<h2>Publications</h2>
-				</header>
-
-				<h3>Peer-Reviewed Publications</h3>
-				<ul>
-					<li>
-						<strong>Baliaka, H.D.</strong>, Ward, R.X., Bahreini, R., Dillner, A.M., Russell, A.G., Seinfeld, J.H., Flagan, R.C., Wennberg, P.O., Ng, N.L. (2025). 
-						Notes from the field: Elevated atmospheric lead levels during the Los Angeles urban fires. <em>CDC MMWR.</em> doi:10.15585/mmwr.mm7405a4
-					</li>
-					<li>
-						Ward, R.X., <strong>Baliaka, H.D.</strong>, Schulze, B.C., Kerr, G.H., Crounse, J.D., Hasheminassab, S., Bahreini, R., Dillner, A.M., Russell, A., Ng, N.L., Wennberg, P.O., Flagan, R.C., Seinfeld, J.H. (2025). 
-						Poorly quantified trends in ammonium nitrate remain critical to understand future urban aerosol control strategies. <em>Science Advances.</em> doi:10.1126/sciadv.adt8957
-					</li>
-					<li>
-						Chen, H., Nie, Q., Yu, Q., Li, J., Niu, M., Yao, Y., Boo, P., Kyi, A., Chao, C.-Y., Deveraux, E., Sung, D.H., Lin, C.-H., Neville, A.C., Blankenship, V., <strong>Baliaka, H.D.</strong>, Flagan, R., Ng, N.L., Bahreini, R., Dillner, A.M., Russell, A.G., Misztal, P.K., Hildebrandt Ruiz, L., Zhu, Y. (2026). 
-						Characterizing Post-Fire Fine and Ultrafine Particles in the 2025 Eaton Fire Burn Zone and Nearby Areas. <em>ChemRxiv Preprint.</em> doi:10.26434/chemrxiv.10001972/v1
-					</li>
-					<li>
-						Murphy, S.E., Buenconsejo, R.S., Draper, D.C., Crounse, J.D., <strong>Baliaka, H.D.</strong>, Ward, R.X., Schulze, B.C., Rezgui, S.P., Ball, K., Susskind, T., Kappaganthula, G., Wennberg, P.O. (2025). 
-						Multi-functional Organic Nitrogen in the Los Angeles Air Basin. <em>ACS ES&T Air.</em> doi:10.1021/acsestair.5c00206
-					</li>
-					<li>
-						Kaltsonoudis, C., Florou, K., Kodros, J.K., Jorga, S.D., Vasilakopoulou, C.N., <strong>Baliaka, H.D.</strong>, Matrali, A., Aktypis, A., Georgopoulou, M.P., Nenes, A., Pandis, S.N. (2024). 
-						Significant contributions of fresh and aged biomass burning organic aerosol from residential burning in a wintertime urban environment. <em>Atmospheric Environment.</em> doi:10.1016/j.atmosenv.2024.121018
-					</li>
-				</ul>
-
-				<h3>In Preparation</h3>
-				<ul>
-					<li>
-						<strong>Real-Time Trace Element Insights from the 2025 Los Angeles Urban Eaton Firestorm</strong><br />
-						Baliaka, H.D., Ward, R.X., Raffuse, S.M., Ries, B., Cui, Y., Wu, D., Liu, R., Barut, C., Hasheminassab, S., Tissot, F., Russell, A., Seinfeld, J.H., Flagan, R.C., Wennberg, P.O., Bahreini, R., Ng, N.L. (Pre-print available upon request)
-					</li>
-					<li>
-						<strong>PHOENIX: A dense sensor network for outdoor PM monitoring in Altadena, CA after the 2025 Eaton Fire</strong><br />
-						Baliaka, H.D., Roehl, C., Kanakaris, N., de la Torre Juarez, M., McDowell, M., Aguilar Rivera, I., Tacail, T., Tissot, F.L.H., Blankenship, V., Hasheminassab, S., Morrell, T., Habre, R., Ng, N.L., Seinfeld, J.H., Flagan, R.C., Wennberg, P.O.
-					</li>
-					<li>
-						<strong>New isotopic analysis for sulfur source attribution in Los Angeles</strong><br />
-						Baliaka, H.D., Dalleska, N., Sessions, A., Wennberg, P.O.
-					</li>
-				</ul>
-			</section>
-
-		</div>
-	</div>
-
-	<!-- PRESENTATIONS PAGE -->
-	<div id="main" style="display: none;">
-		<div class="inner">
-			<section id="presentations">
-				<header class="major"><h2>Presentations</h2></header>
-
-				<div class="row">
-					<!-- LEFT: Conference Presentations -->
-					<div class="col-6 col-12-medium">
-						<h3>Conference Presentations (Main Presenter)</h3>
-						<ul>
-							<li><strong>ACS Spring Meeting</strong> • Atlanta, GA, 2026 • Oral<br />
-								Real-Time Trace Element Insights from the 2025 Los Angeles Urban Eaton Firestorm</li>
-							<li><strong>Air Sensors International Conference (ASIC)</strong> • Los Angeles, CA, 2026 • Oral<br />
-								PHOENIX: A dense sensor network for outdoor PM monitoring in Altadena, CA</li>
-							<li><strong>AGU Fall Meeting</strong> • New Orleans, LA, 2025 • Oral<br />
-								PHOENIX: A dense sensor network for outdoor PM monitoring in Altadena, CA</li>
-							<li><strong>AAAR Annual Conference</strong> • Buffalo, NY, 2025 • Oral<br />
-								Real-Time Trace Element Insights from the 2025 Los Angeles Urban Eaton Firestorm</li>
-							<li><strong>1st Annual LA Fires Research Conference</strong> • UCLA, 2025 • Poster (2 presentations)</li>
-							<li><strong>AGU Fall Meeting</strong> • Washington, DC, 2024 • Poster<br />
-								Yearlong variability and source apportionment of PM2.5 at the Los Angeles ASCENT site</li>
-							<li><strong>AAAR Annual Conference</strong> • Albuquerque, NM, 2024 • Oral<br />
-								Impact of ambient particulate metals in Los Angeles and their sources</li>
-							<li><strong>AAAR Annual Conference</strong> • Portland, OR, 2023 • Poster<br />
-								Characterizing Los Angeles aerosol through long-term high-resolution measurements</li>
-							<li><strong>International Aerosol Conference (IAC)</strong> • Athens, Greece, 2022 • Oral<br />
-								Secondary organic aerosol formation from the oxidation of volatile chemical products</li>
-							<li><strong>IGASP</strong> • UC Irvine, CA, 2022 • Poster<br />
-								Source apportionment of brown carbon at a south-eastern European site</li>
-						</ul>
+			<!-- RESEARCH PAGE -->
+			<div id="research-page" class="page-section">
+				<section id="projects">
+					<header class="major"><h2>Research</h2></header>
+					<div class="research-list">
+						<article class="research-item">
+							<div class="research-media">
+								<a href="#" class="image research-figure">
+									<img src="images/project_s_isotopes.jpg" alt="Using sulfur isotopes to disentangle sulfur sources" />
+								</a>
+							</div>
+							<div class="research-text">
+								<h3>Using S isotopes to disentangle S sources in an urban environment</h3>
+								<p>Source apportionment in the Los Angeles basin using sulfur isotope signatures and complementary aerosol measurements. Funded by the Resnick Sustainability Institute.</p>
+							</div>
+						</article>
+						<article class="research-item">
+							<div class="research-media">
+								<a href="#" class="image research-figure fit-contain">
+									<img src="images/project_ascent.png" alt="ASCENT: trace elements during the LA fires plume" />
+								</a>
+							</div>
+							<div class="research-text">
+								<h3>ASCENT: Trace elements during the LA fires plume</h3>
+								<p>High-time-resolution elemental measurements used to characterize wildfire plume composition and distinguish fire-enhanced signals from urban background sources. Part of the NSF Atmospheric Science and Chemistry mEasurement NeTwork spanning 12 institutions.</p>
+							</div>
+						</article>
+						<article class="research-item">
+							<div class="research-media">
+								<a href="#" class="image research-figure">
+									<video autoplay muted loop playsinline preload="metadata">
+										<source src="images/project_phoenix.mp4" type="video/mp4">
+									</video>
+								</a>
+							</div>
+							<div class="research-text">
+								<h3>PHOENIX: post-fire air quality impacts during debris removal</h3>
+								<p>Neighborhood-scale monitoring designed to understand post-fire particulate resuspension, debris removal impacts, and community exposure. Deployed following the 2025 Eaton Fire in Altadena; generated 11,000+ website views and provided critical data to community members and LA County Public Health.</p>
+							</div>
+						</article>
 					</div>
+				</section>
+			</div>
 
-					<!-- RIGHT: Invited Talks -->
-					<div class="col-6 col-12-medium">
-						<h3>Invited Talks</h3>
-						<ul>
-							<li><strong>University of Washington, ENV H 580</strong> • April 30, 2026<br />
-								Environmental and Occupational Health Seminar<br />
-								"Air quality changes during and after the 2025 Eaton Fire in Los Angeles"</li>
-							<li><strong>9zero Climate Innovation Hub</strong> • Seattle, WA • April 30, 2026<br />
-								"Air quality changes during and after the 2025 Eaton Fire in Los Angeles"</li>
-							<li><strong>California State University Fullerton</strong> • April 9, 2026<br />
-								Dept. of Chemistry and Biochemistry<br />
-								"Air quality changes during and after the 2025 Eaton Fire in Los Angeles"</li>
-							<li><strong>University of Washington, ATMOS 523</strong> • February 23, 2026<br />
-								Seminar in Atmospheric Physics and Chemistry<br />
-								"Air quality changes during and after the 2025 Eaton Fire in Los Angeles"</li>
-							<li><strong>Caltech, Breakfast Exchange in Environment & Sustainability (BEES)</strong> • April 29, 2025<br />
-								"Air quality changes during and after the 2025 Eaton Fire in Los Angeles"</li>
-							<li><strong>Caltech, Resnick Sustainability Institute</strong> • October 30, 2023<br />
-								Research Seminar Series<br />
-								"New isotopic analysis for Sulfur source attribution in Los Angeles"</li>
-						</ul>
+			<!-- PUBLICATIONS PAGE -->
+			<div id="publications-page" class="page-section">
+				<section>
+					<header class="major"><h2>Publications</h2></header>
+					<h3>Peer-Reviewed Publications</h3>
+					<ul>
+						<li><strong>Baliaka, H.D.</strong>, Ward, R.X., Bahreini, R., Dillner, A.M., Russell, A.G., Seinfeld, J.H., Flagan, R.C., Wennberg, P.O., Ng, N.L. (2025). Notes from the field: Elevated atmospheric lead levels during the Los Angeles urban fires. <em>CDC MMWR.</em> doi:10.15585/mmwr.mm7405a4</li>
+						<li>Ward, R.X., <strong>Baliaka, H.D.</strong>, Schulze, B.C., Kerr, G.H., Crounse, J.D., Hasheminassab, S., Bahreini, R., Dillner, A.M., Russell, A., Ng, N.L., Wennberg, P.O., Flagan, R.C., Seinfeld, J.H. (2025). Poorly quantified trends in ammonium nitrate remain critical to understand future urban aerosol control strategies. <em>Science Advances.</em> doi:10.1126/sciadv.adt8957</li>
+						<li>Chen, H., Nie, Q., Yu, Q., Li, J., Niu, M., Yao, Y., Boo, P., Kyi, A., Chao, C.-Y., Deveraux, E., Sung, D.H., Lin, C.-H., Neville, A.C., Blankenship, V., <strong>Baliaka, H.D.</strong>, Flagan, R., Ng, N.L., Bahreini, R., Dillner, A.M., Russell, A.G., Misztal, P.K., Hildebrandt Ruiz, L., Zhu, Y. (2026). Characterizing Post-Fire Fine and Ultrafine Particles in the 2025 Eaton Fire Burn Zone and Nearby Areas. <em>ChemRxiv Preprint.</em> doi:10.26434/chemrxiv.10001972/v1</li>
+						<li>Murphy, S.E., Buenconsejo, R.S., Draper, D.C., Crounse, J.D., <strong>Baliaka, H.D.</strong>, Ward, R.X., Schulze, B.C., Rezgui, S.P., Ball, K., Susskind, T., Kappaganthula, G., Wennberg, P.O. (2025). Multi-functional Organic Nitrogen in the Los Angeles Air Basin. <em>ACS ES&T Air.</em> doi:10.1021/acsestair.5c00206</li>
+						<li>Kaltsonoudis, C., Florou, K., Kodros, J.K., Jorga, S.D., Vasilakopoulou, C.N., <strong>Baliaka, H.D.</strong>, Matrali, A., Aktypis, A., Georgopoulou, M.P., Nenes, A., Pandis, S.N. (2024). Significant contributions of fresh and aged biomass burning organic aerosol from residential burning in a wintertime urban environment. <em>Atmospheric Environment.</em> doi:10.1016/j.atmosenv.2024.121018</li>
+					</ul>
+					<h3>In Preparation</h3>
+					<ul>
+						<li><strong>Real-Time Trace Element Insights from the 2025 Los Angeles Urban Eaton Firestorm</strong><br />Baliaka, H.D., Ward, R.X., Raffuse, S.M., Ries, B., Cui, Y., Wu, D., Liu, R., Barut, C., Hasheminassab, S., Tissot, F., Russell, A., Seinfeld, J.H., Flagan, R.C., Wennberg, P.O., Bahreini, R., Ng, N.L.</li>
+						<li><strong>PHOENIX: A dense sensor network for outdoor PM monitoring in Altadena, CA after the 2025 Eaton Fire</strong><br />Baliaka, H.D., Roehl, C., Kanakaris, N., de la Torre Juarez, M., McDowell, M., Aguilar Rivera, I., Tacail, T., Tissot, F.L.H., Blankenship, V., Hasheminassab, S., Morrell, T., Habre, R., Ng, N.L., Seinfeld, J.H., Flagan, R.C., Wennberg, P.O.</li>
+						<li><strong>New isotopic analysis for sulfur source attribution in Los Angeles</strong><br />Baliaka, H.D., Dalleska, N., Sessions, A., Wennberg, P.O.</li>
+					</ul>
+				</section>
+			</div>
 
-						<h4>Media Coverage</h4>
-						<ul>
-							<li>
-								<a href="https://www.nytimes.com/2025/01/20/climate/los-angeles-wildfires-lead-chlorine-air-quality.html">
-									Airborne Lead and Chlorine Levels Soared as L.A. Wildfires Raged
-								</a><br />
-								<em>The New York Times</em> • January 2025
-							</li>
-							<li>
-								<a href="https://www.caltech.edu/about/news/phoenix-air-monitoring-project-in-altadena-rises-from-the-ashes">
-									PHOENIX Air Monitoring Project in Altadena Rises from the Ashes
-								</a><br />
-								<em>Caltech News</em> • 2025
-							</li>
-							<li>
-								<a href="https://www.caltech.edu/about/news/caltech-aerosol-monitoring-site-collects-data-in-aftermath-of-urban-firestorm">
-									Caltech Aerosol Monitoring Site Collects Data in Aftermath of Urban Firestorm
-								</a><br />
-								<em>Caltech News</em> • 2025
-							</li>
-							<li>
-								<a href="https://www.caltech.edu/about/news/one-year-later-fire-research-continues-to-support-the-community">
-									One Year Later, Fire Research Continues to Support the Community
-								</a><br />
-								<em>Caltech News</em> • 2026
-							</li>
-						</ul>
-
-						<h4>Public Webinars</h4>
-						<ul>
-							<li><strong>Environmental Impacts of Fires at the Wildland–Urban Interface</strong><br />
-								Caltech Science Exchange • ~2,000 attendees • January 31, 2025</li>
-							<li><strong>Conversations After the Fires: Air Quality and Health</strong><br />
-								Caltech Science Exchange • ~600 attendees • May 2, 2025</li>
-							<li><strong>Three Minute Thesis (3MT) Finalist</strong><br />
-								<a href="https://www.youtube.com/watch?v=3eS2jj8ZltU">Watch on YouTube</a></li>
-						</ul>
+			<!-- PRESENTATIONS PAGE -->
+			<div id="presentations-page" class="page-section">
+				<section>
+					<header class="major"><h2>Presentations</h2></header>
+					<div class="row">
+						<div>
+							<h3>Conference Presentations</h3>
+							<ul>
+								<li><strong>ACS Spring Meeting</strong> • Atlanta, GA, 2026 • Oral<br />Real-Time Trace Element Insights from the 2025 LA Eaton Firestorm</li>
+								<li><strong>Air Sensors International Conference</strong> • Los Angeles, CA, 2026 • Oral<br />PHOENIX: Dense sensor network for PM monitoring</li>
+								<li><strong>AGU Fall Meeting</strong> • New Orleans, LA, 2025 • Oral<br />PHOENIX: Dense sensor network for PM monitoring</li>
+								<li><strong>AAAR Annual Conference</strong> • Buffalo, NY, 2025 • Oral<br />Real-Time Trace Elements from 2025 LA Eaton Firestorm</li>
+								<li><strong>1st Annual LA Fires Research Conference</strong> • UCLA, 2025 • Poster (2 presentations)</li>
+								<li><strong>AGU Fall Meeting</strong> • Washington, DC, 2024 • Poster<br />Yearlong variability and source apportionment of PM2.5</li>
+								<li><strong>AAAR Annual Conference</strong> • Albuquerque, NM, 2024 • Oral<br />Impact of ambient particulate metals in Los Angeles</li>
+								<li><strong>AAAR Annual Conference</strong> • Portland, OR, 2023 • Poster<br />Characterizing LA aerosol through high-resolution measurements</li>
+								<li><strong>International Aerosol Conference</strong> • Athens, Greece, 2022 • Oral<br />Secondary organic aerosol formation from volatile chemical products</li>
+								<li><strong>IGASP</strong> • UC Irvine, CA, 2022 • Poster<br />Source apportionment of brown carbon</li>
+							</ul>
+						</div>
+						<div>
+							<h3>Invited Talks</h3>
+							<ul>
+								<li><strong>University of Washington, ENV H 580</strong> • April 30, 2026<br />Environmental and Occupational Health Seminar</li>
+								<li><strong>9zero Climate Innovation Hub</strong> • Seattle, WA • April 30, 2026</li>
+								<li><strong>California State University Fullerton</strong> • April 9, 2026<br />Chemistry and Biochemistry Department</li>
+								<li><strong>University of Washington, ATMOS 523</strong> • February 23, 2026<br />Atmospheric Physics and Chemistry Seminar</li>
+								<li><strong>Caltech, BEES</strong> • April 29, 2025<br />Breakfast Exchange in Environment & Sustainability</li>
+								<li><strong>Caltech, RSI Seminar</strong> • October 30, 2023<br />Resnick Sustainability Institute</li>
+							</ul>
+							<h4>Public Webinars</h4>
+							<ul>
+								<li><strong>Environmental Impacts of Fires at Wildland–Urban Interface</strong><br />Caltech Science Exchange • ~2,000 attendees • Jan 31, 2025</li>
+								<li><strong>Conversations After the Fires: Air Quality and Health</strong><br />Caltech Science Exchange • ~600 attendees • May 2, 2025</li>
+								<li><strong>Three Minute Thesis (3MT) Finalist</strong><br /><a href="https://www.youtube.com/watch?v=3eS2jj8ZltU">Watch on YouTube</a></li>
+							</ul>
+							<h4>Media Coverage</h4>
+							<ul>
+								<li><a href="https://www.nytimes.com/2025/01/20/climate/los-angeles-wildfires-lead-chlorine-air-quality.html">Airborne Lead and Chlorine Levels Soared</a> • <em>New York Times</em></li>
+								<li><a href="https://www.caltech.edu/about/news/phoenix-air-monitoring-project-in-altadena-rises-from-the-ashes">PHOENIX Project Rises from the Ashes</a> • <em>Caltech News</em></li>
+								<li><a href="https://www.caltech.edu/about/news/caltech-aerosol-monitoring-site-collects-data-in-aftermath-of-urban-firestorm">Aerosol Monitoring Data</a> • <em>Caltech News</em></li>
+								<li><a href="https://www.caltech.edu/about/news/one-year-later-fire-research-continues-to-support-the-community">Fire Research Continues</a> • <em>Caltech News</em></li>
+							</ul>
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
+
+			<!-- CV PAGE -->
+			<div id="cv-page" class="page-section">
+				<section>
+					<header class="major"><h2>CV</h2></header>
+					<h3>Awards & Fellowships</h3>
+					<ul>
+						<li><strong>2025 CCID Celebration of Excellence Award</strong> — Led PHOENIX project following Eaton Canyon fire</li>
+						<li><strong>2025 Three Minute Thesis (3MT) Finalist</strong> — Compelling communication of doctoral research</li>
+						<li><strong>2024 GPS Mentoring and Outreach Award</strong> — Led K–12 outreach GO-Outdoors program</li>
+						<li><strong>2024 ESE Community Building Award</strong> — Supporting Caltech Environmental Science option</li>
+						<li><strong>2023–2026 Onassis Foundation Scholarship</strong> — $36,000 merit-based scholarship</li>
+						<li><strong>2023 Ariston–NHSA Prize</strong> — $1,000 merit-based scholarship</li>
+						<li><strong>2022–2026 Resnick Sustainability Institute Explorer Grant</strong> — $94,906 research funding</li>
+						<li><strong>2017–2021 Undergraduate Academic Excellence Awards</strong> (6 total)</li>
+					</ul>
+					<h3>Education</h3>
+					<ul>
+						<li><strong>Ph.D., Environmental Science and Engineering</strong><br />California Institute of Technology • Sep 2021–present</li>
+						<li><strong>M.S., Environmental Science and Engineering (GPA 3.9/4.0)</strong><br />California Institute of Technology • Sep 2021–Jun 2023</li>
+						<li><strong>Dipl. Ing., Chemical Engineering</strong><br />University of Patras, Greece • Sep 2015–Jul 2020<br />Graduated 1st out of 120 students</li>
+					</ul>
+					<h3>Science Policy</h3>
+					<ul>
+						<li><strong>Summer 2026</strong> — Science Policy Intern, Washington State Department of Health</li>
+						<li><strong>2026–present</strong> — Community Scientist, AGU Thriving Earth Exchange<br />Community-Led Sulfur Pollution Assessment, Port Townsend, WA</li>
+						<li><strong>Dec 2024–Feb 2025</strong> — CCST Science Translator<br />California Council on Science & Technology</li>
+					</ul>
+				</section>
+			</div>
+
+			<!-- TEACHING PAGE -->
+			<div id="teaching-page" class="page-section">
+				<section>
+					<header class="major"><h2>Teaching & Mentoring</h2></header>
+					<h3>Teaching Assistant (Sep 2022–present)</h3>
+					<ul>
+						<li>Atmospheric Chemistry I (ESE/Ge/Ch 171)</li>
+						<li>Climate Change Impacts, Mitigation and Adaptation (ESE/ME/EST/Ec/ChE/EE 179)</li>
+						<li>Mentoring and Outreach for GO-Outdoors (Ge/ESE 298; 3 quarters)</li>
+					</ul>
+					<h3>Guest Lecturer (2023–2026)</h3>
+					<ul>
+						<li>Current Problems in Environmental Science and Engineering (ESE 104; 2024, 2026)</li>
+						<li>Environmental Impacts of Wildfire (ESE 200; 2025)</li>
+						<li>Atmospheric Chemistry I (ESE 171; 2023)</li>
+					</ul>
+					<h3>SURF Student Mentor (Summer 2024)</h3>
+					<ul>
+						<li>Mentored undergraduate researcher on "Evolution of black and brown carbon in the Los Angeles Basin"<br />Received Caltech's Certificate of Interest in Undergraduate Research Mentoring</li>
+					</ul>
+				</section>
+			</div>
+
+			<!-- OUTREACH PAGE -->
+			<div id="outreach-page" class="page-section">
+				<section>
+					<header class="major"><h2>Outreach</h2></header>
+					<ul>
+						<li><strong>Mar 2026</strong> — Conference Symposium Co-Organizer, American Chemical Society Spring Meeting, Atlanta, GA<br />Co-led "Wildland Urban Interface (WUI) Fire Impacts on Environmental Systems" and served as session presider</li>
+						<li><strong>2021–2025</strong> — ASCENT Standard Operating Procedures Student Committee Member, NSF Atmospheric Science and Chemistry mEasurement NeTwork<br />Coordinated protocols across 12 institutions. Received Certificate of Appreciation</li>
+						<li><strong>2022–2024</strong> — Lab Safety Officer, Seinfeld Group, Caltech</li>
+						<li><strong>2024</strong> — Scientific Outreach Event Co-Organizer, Caltech<br />Linde Center Open House (100 participants) and Two-day Science Symposium (150 participants)</li>
+						<li><strong>2024</strong> — International Student Programs (ISP) Orientation Leader, Caltech</li>
+						<li><strong>2023–2024</strong> — GO-Outdoors Program Lead, Caltech<br />Developed lesson plans, doubled reach to 1,000+ students from underrepresented schools</li>
+						<li><strong>2022–present</strong> — Founder & President, Hellenic Students Association of Caltech</li>
+					</ul>
+				</section>
+			</div>
+
 		</div>
 	</div>
 
-	<!-- CV PAGE -->
-	<div id="main" style="display: none;">
-		<div class="inner">
-			<section id="cv">
-				<header class="major"><h2>CV</h2></header>
-				
-				<h3>Awards & Fellowships</h3>
-				<ul>
-					<li><strong>2025 CCID Celebration of Excellence Award</strong> — Led the PHOENIX air quality project following the Eaton Canyon fire</li>
-					<li><strong>2025 Three Minute Thesis (3MT) Finalist</strong> — Recognized for compelling communication of doctoral research to a nonspecialist audience</li>
-					<li><strong>2024 GPS Mentoring and Outreach Award</strong> — Led and scaled Caltech's K–12 outreach program GO-Outdoors; developed lesson plans, oversaw 10+ projects, and doubled reach to 1000+ students from underrepresented schools</li>
-					<li><strong>2024 ESE Community Building Award</strong> — Recognized for contributions to supporting and enhancing the Caltech Environmental Science and Engineering option</li>
-					<li><strong>2023–2026 Onassis Foundation Academic Excellence Scholarship</strong> — $36,000 merit-based scholarship awarded to 70 Greek scholars worldwide</li>
-					<li><strong>2023 Ariston–NHSA Prize</strong> — $1,000 merit-based scholarship for distinguished students of Hellenic descent</li>
-					<li><strong>2022–2026 Resnick Sustainability Institute Explorer Grant</strong> — $94,906 competitive research funding supporting sustainability-focused doctoral work</li>
-					<li><strong>2017–2021 Undergraduate Academic Excellence Awards</strong> (6 total)</li>
-				</ul>
-
-				<h3>Education</h3>
-				<ul>
-					<li><strong>Ph.D., Environmental Science and Engineering</strong><br />
-						California Institute of Technology, Pasadena, CA • Sep 2021–present</li>
-					<li><strong>M.S., Environmental Science and Engineering (GPA 3.9/4.0)</strong><br />
-						California Institute of Technology, Pasadena, CA • Sep 2021–Jun 2023</li>
-					<li><strong>Dipl. Ing., Chemical Engineering (5-year degree, GPA 8.98/10)</strong><br />
-						University of Patras, Greece • Sep 2015–Jul 2020<br />
-						Graduated 1st out of 120 students | Professional Engineering License, Technical Chamber of Greece (2021)</li>
-				</ul>
-
-				<h3>Science Policy</h3>
-				<ul>
-					<li><strong>Summer 2026</strong> — Science Policy Intern, Washington State Department of Health<br />
-						Caltech LCSSP Fellowship focused on energy resource constraints and built environment policy planning</li>
-					<li><strong>2026–present</strong> — Community Scientist, AGU Thriving Earth Exchange<br />
-						Community-Led Sulfur Pollution Assessment, Port Townsend, WA. Supporting community air quality monitoring design and policy engagement for sulfur emissions</li>
-					<li><strong>Dec 2024–Feb 2025</strong> — California Council on Science & Technology (CCST) Science Translator<br />
-						Completed science policy communications training for translating research for policy audiences</li>
-				</ul>
-			</section>
-		</div>
-	</div>
-
-	<!-- TEACHING PAGE -->
-	<div id="main" style="display: none;">
-		<div class="inner">
-			<section id="teaching">
-				<header class="major"><h2>Teaching & Mentoring</h2></header>
-				
-				<h3>Teaching Assistant (Sep 2022–present)</h3>
-				<ul>
-					<li>Atmospheric Chemistry I (ESE/Ge/Ch 171)</li>
-					<li>Climate Change Impacts, Mitigation and Adaptation (ESE/ME/EST/Ec/ChE/EE 179)</li>
-					<li>Mentoring and Outreach for GO-Outdoors (Ge/ESE 298; 3 quarters)</li>
-				</ul>
-
-				<h3>Guest Lecturer (2023–2026)</h3>
-				<ul>
-					<li>Current Problems in Environmental Science and Engineering (ESE 104; 2024, 2026)</li>
-					<li>Environmental Impacts of Wildfire (ESE 200; 2025)</li>
-					<li>Atmospheric Chemistry I (ESE 171; 2023)</li>
-				</ul>
-
-				<h3>SURF Student Mentor (Summer 2024)</h3>
-				<ul>
-					<li>Mentored an undergraduate researcher over a 10-week Caltech SURF program on "Evolution of black and brown carbon in the Los Angeles Basin." Received Caltech's Certificate of Interest in Undergraduate Research Mentoring.</li>
-				</ul>
-			</section>
-		</div>
-	</div>
-
-	<!-- OUTREACH PAGE -->
-	<div id="main" style="display: none;">
-		<div class="inner">
-			<section id="outreach">
-				<header class="major"><h2>Outreach</h2></header>
-				
-				<ul>
-					<li><strong>Mar 2026</strong> — Conference Symposium Co-Organizer, American Chemical Society Spring Meeting, Atlanta, GA<br />
-						Co-led and organized the symposium "Wildland Urban Interface (WUI) Fire Impacts on Environmental Systems: Integrating Soil, Water, Air, and Public Health Perspectives" and served as session presider</li>
-
-					<li><strong>2021–2025</strong> — ASCENT Standard Operating Procedures Student Committee Member, NSF Atmospheric Science and Chemistry mEasurement NeTwork (12 institutions)<br />
-						Coordinated measurement protocols across a multi-institutional research network. Received Certificate of Appreciation for outstanding contributions</li>
-
-					<li><strong>2022–2024</strong> — Lab Safety Officer, Seinfeld Group, Caltech<br />
-						Enforced safety standards and ensured safe laboratory operations</li>
-
-					<li><strong>2024</strong> — Scientific Outreach Event Co-Organizer, Caltech<br />
-						Linde Center Open House (100 participants) and Two-day Science Symposium (150 participants)</li>
-
-					<li><strong>2024</strong> — International Student Programs (ISP) Orientation Leader, Caltech</li>
-
-					<li><strong>2023–2024</strong> — GO-Outdoors Program Lead, Caltech<br />
-						Developed lesson plans, oversaw 10+ projects, and doubled reach to 1,000+ students from underrepresented schools</li>
-
-					<li><strong>2022–present</strong> — Founder & President, Hellenic Students Association of Caltech</li>
-				</ul>
-			</section>
-		</div>
-	</div>
-
-	<!-- SIDEBAR -->
 	<div id="sidebar">
 		<div class="inner">
 
@@ -652,13 +299,13 @@
 
 			<nav id="menu">
 				<ul>
-					<li><a href="#banner"><span class="nav-label">About</span></a></li>
-					<li><a href="#projects"><span class="nav-label">Research</span></a></li>
-					<li><a href="#publications"><span class="nav-label">Publications</span></a></li>
-					<li><a href="#presentations"><span class="nav-label">Presentations</span></a></li>
-					<li><a href="#cv"><span class="nav-label">CV</span></a></li>
-					<li><a href="#teaching"><span class="nav-label">Teaching</span></a></li>
-					<li><a href="#outreach"><span class="nav-label">Outreach</span></a></li>
+					<li><a onclick="showPage('about')"><span class="nav-label">About</span></a></li>
+					<li><a onclick="showPage('research')"><span class="nav-label">Research</span></a></li>
+					<li><a onclick="showPage('publications')"><span class="nav-label">Publications</span></a></li>
+					<li><a onclick="showPage('presentations')"><span class="nav-label">Presentations</span></a></li>
+					<li><a onclick="showPage('cv')"><span class="nav-label">CV</span></a></li>
+					<li><a onclick="showPage('teaching')"><span class="nav-label">Teaching</span></a></li>
+					<li><a onclick="showPage('outreach')"><span class="nav-label">Outreach</span></a></li>
 				</ul>
 			</nav>
 
@@ -681,6 +328,25 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+	function showPage(pageName) {
+		// Hide all pages
+		var pages = document.querySelectorAll('.page-section');
+		pages.forEach(function(page) {
+			page.classList.remove('active');
+		});
+		
+		// Show selected page
+		var selectedPage = document.getElementById(pageName + '-page');
+		if (selectedPage) {
+			selectedPage.classList.add('active');
+		}
+		
+		// Scroll to top
+		window.scrollTo(0, 0);
+	}
+</script>
 
 </body>
 </html>
